@@ -1,28 +1,64 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>Fotobudka XYZ</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fotobudka Flash Zone</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Fotobudka XYZ</h1>
-    <p>Uchwyć swoje najlepsze chwile!</p>
+  <!-- Nawigacja -->
+  <nav>
+    <div class="nav-container">
+      <h1>Flash Zone</h1>
+      <ul>
+        <li><a href="#główna">Główna</a></li>
+        <li><a href="#oferta">Oferta</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Sekcja główna -->
+  <header id="główna">
+    <div class="container">
+      <h2>Organizujesz imprezę?</h2>
+      <p class="lead">Zachowaj wspomnienia nie tylko w pamięci!</p>
+      <p class="small">Fotobudka z kabiną LED, aparatem Instax i wyjątkową księgą gości.</p>
+      <a href="#oferta" class="btn">Zobacz ofertę</a>
+    </div>
   </header>
-  <main>
-    <section>
+
+  <!-- Sekcja oferta -->
+  <section id="oferta" class="section oferta">
+    <div class="container">
       <h2>Nasza oferta</h2>
-      <p>Fotobudka na wesela, eventy i imprezy firmowe.</p>
-    </section>
-    <section>
-      <h2>Galeria</h2>
-      <img src="" alt="Fotobudka w akcji">
-    </section>
-    <section>
-      <h2>Kontakt</h2>
-      <p>kontakt@fotobudkaxyz.pl</p>
-    </section>
-  </main>
+      <p>Oferujemy kompleksową obsługę imprez, dostarczając nie tylko świetną zabawę, ale też trwałe wspomnienia.</p>
+      <div class="grid">
+        <div class="box"><h3>📸 Wesela</h3><p>Magiczne zdjęcia dla nowożeńców i gości – z mnóstwem śmiechu i gadżetów.</p></div>
+        <div class="box"><h3>🎉 Urodziny</h3><p>Zabawa z fotobudką na każdą okazję – dla dzieci i dorosłych.</p></div>
+        <div class="box"><h3>🎓 Studniówki</h3><p>Wyjątkowe wspomnienia dla maturzystów, które zostaną z nimi na zawsze.</p></div>
+        <div class="box"><h3>💍 Jubileusze</h3><p>Sentymentalna podróż przez wspólne lata, uchwycona na zdjęciach.</p></div>
+        <div class="box"><h3>🎪 Festyny</h3><p>Idealna atrakcja plenerowa dla rodzin i dzieci.</p></div>
+        <div class="box"><h3>🏢 Imprezy firmowe</h3><p>Luźna atmosfera i niezapomniane integracje pracownicze.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sekcja kontakt -->
+  <section id="kontakt" class="section kontakt">
+    <div class="container">
+      <h2>Skontaktuj się z nami</h2>
+      <p>Masz pytania lub chcesz zarezerwować termin? Jesteśmy dostępni!</p>
+      <p><strong>📩 E-mail:</strong> kontakt@flashzone.pl</p>
+      <p><strong>📞 Telefon:</strong> 123 456 789</p>
+      <p><strong>💬 Messenger:</strong> <a href="https://www.facebook.com/FlashZoneFotobudka" target="_blank">Flash Zone na Facebooku</a></p>
+    </div>
+  </section>
+
+  <!-- Stopka -->
+  <footer>
+    <p>&copy; 2025 Fotobudka Flash Zone – Uchwyć swój moment 📸</p>
+  </footer>
 </body>
 </html>
