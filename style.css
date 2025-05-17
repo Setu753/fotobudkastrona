@@ -148,6 +148,12 @@
     scroll-margin-top: 70px; /* dopasowane do wysokości sticky menu */
   }
   #kontakt {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 70px;
   }
-  
+  #o-fotobudce h2 {
+    margin-bottom: 1.5rem;
+  }
+  #o-fotobudce {
+    scroll-margin-top: 70px;
+
+ }  

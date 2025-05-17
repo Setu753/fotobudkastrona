@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wesela – Flash Zone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">📸 Flash Zone</div>
+      <ul>
+        <li><a href="index.html#główna">Główna</a></li>
+        <li><a href="index.html#oferta">Oferta</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section fade-in">
+    <div class="container">
+      <h2>Wesela</h2>
+      <p>Fotobudka to idealna atrakcja na każde wesele – tworzy wyjątkową atmosferę i pamiątki dla nowożeńców oraz gości.</p>
+      <p>Oferujemy personalizowane tła, mnóstwo gadżetów i nieograniczoną ilość zdjęć. Dodatkowo – księga gości oraz wersje cyfrowe!</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Fotobudka Flash Zone – Uchwyć swój moment 📸</p>
+  </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appear = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    faders.forEach(el => appear.observe(el));
+  </script>
+</body>
+</html>
