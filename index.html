@@ -2,97 +2,176 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fotobudka Flash Zone</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fotobudka — Twoje wydarzenie</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Nawigacja -->
-  <nav>
-    <div class="nav-container">
-      <h1>📸 Flash Zone</h1>
-      <ul>
-        <li><a href="#główna">Główna</a></li>
-        <li><a href="#oferta">Oferta</a></li>
-        <li><a href="#o-fotobudce">O fotobudce</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-      </ul>
+  <nav class="container">
+    <a class="brand" href="#home">fotobudka.<span>flash</span></a>
+    <div class="links">
+      <a href="#home">Główna</a>
+      <a href="#onas">O nas</a>
+      <a id="navOferta" href="#oferta">Oferta</a>
+      <a href="#kontakt">Kontakt</a>
     </div>
   </nav>
 
-  <!-- Sekcja główna -->
-  <header id="główna">
-    <div class="container">
-      <h2>Organizujesz imprezę?</h2>
-      <p class="lead">Zachowaj wspomnienia nie tylko w pamięci!</p>
-      <p class="small">Fotobudka z kabiną LED, aparatem Instax i wyjątkową księgą gości.</p>
-      <a href="#oferta" class="btn">Zobacz ofertę</a>
+  <header id="home" class="hero">
+    <!-- Podmień obrazek w CSS lub wstaw tu <img> -->
+    <div class="hero-content container">
+      <h1>Uchwyć najlepsze chwile</h1>
+      <p>Fotobudka i atrakcje eventowe na wesela, studniówki i imprezy firmowe. Lekki setup, szybki montaż, piękne wydruki i galeria online.</p>
+      <a class="btn" href="#kontakt">Zarezerwuj termin</a>
     </div>
   </header>
 
-  <!-- Sekcja oferta -->
-  <section id="oferta" class="section oferta">
-    <div class="container">
-      <h2>Nasza oferta</h2>
-      <p>Oferujemy kompleksową obsługę imprez, dostarczając nie tylko świetną zabawę, ale też trwałe wspomnienia.</p>
-      <div class="grid">
-        <div class="box"><h3><a href="wesela.html">📸 Wesela</h3></a><p>Magiczne zdjęcia dla nowożeńców i gości – z mnóstwem śmiechu i gadżetów.</p></div>
-        <div class="box"><h3><a href="urodziny.html">🎉 Urodziny</h3></a><p>Zabawa z fotobudką na każdą okazję – dla dzieci i dorosłych.</p></div>
-        <div class="box"><h3><a href="studniowki.html">🎓 Studniówki</h3></a><p>Wyjątkowe wspomnienia dla maturzystów, które zostaną z nimi na zawsze.</p></div>
-        <div class="box"><h3><a href="jubileusze.html">💍 Jubileusze</h3></a><p>Sentymentalna podróż przez wspólne lata, uchwycona na zdjęciach.</p></div>
-        <div class="box"><h3><a href="festyny.html">🎪 Festyny</h3></a><p>Idealna atrakcja plenerowa dla rodzin i dzieci.</p></div>
-        <div class="box"><h3><a href="firmowe.html">🏢 Imprezy firmowe</h3></a><p>Luźna atmosfera i niezapomniane integracje pracownicze.</p></div>
-      </div>
-    </div>
+  <section id="onas" class="container">
+    <h2>O nas</h2>
+    <p class="lead">
+      Jesteśmy mobilną ekipą z Wielkopolski. Dowozi<strong>my sprzęt</strong>, opiekę operatora i personalizowane szablony wydruków.
+      Działamy szybko i bezproblemowo — Ty się bawisz, my łapiemy emocje.
+    </p>
   </section>
-  <section id="o-fotobudce" class="section fade-in">
-    <div class="container">
-      <h2>Nasza fotobudka</h2>
-      <p>Flash Zone to coś więcej niż zwykła fotobudka – to stacja tworzenia wspomnień z nowoczesnym stylem i technologią.</p>
-  
-      <div class="grid">
-        <div class="box">
-            <a href=""><h3>🎥 Profesjonalny sprzęt</h3></a>
-          <p>Aparat lustrzanka (Canon/Nikon) gwarantuje wysoką jakość zdjęć, nawet w trudnym oświetleniu.</p>
+
+  <section id="oferta" class="container">
+    <!-- Klikalne H2 -->
+    <h2 id="ofertaToggle" role="button" tabindex="0" aria-expanded="false" aria-controls="listaPakietow">Oferta</h2>
+
+    <div id="listaPakietow" class="pakiety" hidden>
+      <!-- Telefon Życzeń -->
+      <article class="kategoria" id="tel-zyczen">
+        <button type="button" aria-expanded="false">
+          <span><strong>Telefon Życzeń</strong> — goście nagrywają życzenia głosowe</span>
+          <span class="chev">▸</span>
+        </button>
+        <div class="content" hidden>
+          <p>Stylowy telefon, który zapisuje wiadomości od gości. Po wydarzeniu dostajesz paczkę plików audio (MP3) + opcjonalny montaż.</p>
+          <ul class="bullets">
+            <li>Setup w strefie chill/księga gości</li>
+            <li>Nielimitowane nagrania</li>
+            <li>Personalizowana kartka z instrukcją</li>
+          </ul>
+
+          <!-- GALERIA: podmień ścieżki na swoje -->
+          <div class="gallery">
+            <figure class="tile">
+              <img src="assets/telefon.jpeg" alt="Telefon Życzeń — stanowisko" loading="lazy">
+              <figcaption>Stanowisko</figcaption>
+            </figure>
+            <figure class="tile">
+              <img src="assets/telefon2.jpeg" alt="Telefon Życzeń — detale" loading="lazy">
+              <figcaption>Detale</figcaption>
+            </figure>
+            <figure class="tile">
+              <img src="assets/telefon3.jpg" alt="Telefon Życzeń — goście nagrywają" loading="lazy">
+              <figcaption>Goście nagrywają</figcaption>
+            </figure>
+            
+          </div>
         </div>
-        <div class="box">
-            <a href=""><h3>💡 Kabina LED</h3></a>
-          <p>Efektowna kabina z podświetleniem RGB dodaje imprezowego klimatu i przyciąga wzrok gości.</p>
+      </article>
+
+      <!-- Retro -->
+      <article class="kategoria" id="retro">
+        <button type="button" aria-expanded="false">
+          <span><strong>Retro</strong> — fotobudka w klimacie vintage</span>
+          <span class="chev">▸</span>
+        </button>
+        <div class="content" hidden>
+          <p>Drewniana obudowa, ciepłe światło, klasyczny look zdjęć. Idealne do rustykalnych i boho przyjęć.</p>
+          <ul class="bullets">
+            <li>Wydruki 5×15 lub 10×15 z personalizacją</li>
+            <li>Gadżety w klimacie retro</li>
+            <li>Galeria online + pendrive po evencie</li>
+          </ul>
+      
+          <!-- GALERIA — PODMIEŃ ŚCIEŻKI NA SWOJE PLIKI -->
+          <div class="gallery">
+            <figure class="tile">
+              <img src="assets/retro1.jpg" alt="Fotobudka Retro — obudowa drewniana" loading="lazy">
+              <figcaption>Obudowa drewniana</figcaption>
+            </figure>
+            <figure class="tile">
+              <img src="assets/retro2.jpeg" alt="Fotobudka Retro — stanowisko na sali" loading="lazy">
+              <figcaption>Stanowisko na sali</figcaption>
+            </figure>
+            <figure class="tile">
+              <img src="assets/retro-3.jpg" alt="Fotobudka Retro — przykładowy wydruk" loading="lazy">
+              <figcaption>Przykładowy wydruk</figcaption>
+            </figure>
+          </div>
         </div>
-        <div class="box">
-            <a href=""><h3>🖐 Dotykowy ekran</h3></a>
-          <p>Nowoczesny interfejs z animacjami i odliczaniem – intuicyjny i zabawny.</p>
+      </article>
+      
+
+      <!-- Klasyczna -->
+      <article class="kategoria" id="klasyczna">
+        <button type="button" aria-expanded="false">
+          <span><strong>Klasyczna</strong> — uniwersalny hit każdej imprezy</span>
+          <span class="chev">▸</span>
+        </button>
+        <div class="content" hidden>
+          <p>Nowoczesna fotobudka z oświetleniem i szybkim drukiem. Nielimitowane ujęcia, operator do pomocy oraz personalizowany szablon wydruku.</p>
+          <ul class="bullets">
+            <li>3–4 godziny pracy fotobudki</li>
+            <li>Nielimitowane zdjęcia + wydruki 5×15 / 10×15</li>
+            <li>Galeria online oraz pendrive po evencie</li>
+          </ul>
+      
+          <div class="gallery">
+            <figure class="tile">
+              <img src="assets/klasyczna1.jpeg" alt="Fotobudka Klasyczna — stanowisko z gadżetami" loading="lazy">
+              <figcaption>Stanowisko z gadżetami</figcaption>
+            </figure>
+            <figure class="tile">
+              <img src="assets/klasyczna2.jpeg" alt="Fotobudka Klasyczna — namiot i budka" loading="lazy">
+              <figcaption>Namiot i budka</figcaption>
+            </figure>
+          </div>
         </div>
-        <div class="box">
-            <a href=""><h3>🖨 Ekspresowy wydruk</h3></a>
-          <p>Drukarka termosublimacyjna – zdjęcia gotowe w 10 sekund w formacie 10x15 cm.</p>
+      </article>
+      
+
+      <!-- Ciężki Dym -->
+      <article class="kategoria" id="ciezki-dym">
+        <button type="button" aria-expanded="false">
+          <span><strong>Ciężki Dym</strong> — pierwszy taniec jak w chmurach</span>
+          <span class="chev">▸</span>
+        </button>
+        <div class="content" hidden>
+          <p>Efekt gęstej, przyziemnej mgły. Sprzęt klasy eventowej, bez uruchamiania czujek dymu (po uzgodnieniu z salą).</p>
+          <ul class="bullets">
+            <li>Operator i pełna obsługa</li>
+            <li>Efekt ~3–5 minut (możliwe dogenerowanie)</li>
+            <li>Wymagania: dostęp do gniazdka, brak przeciągów</li>
+          </ul>
+          <div class="gallery">
+            <div class="tile placeholder">assets/ciezki-dym-1.jpg</div>
+            <div class="tile placeholder">assets/ciezki-dym-2.jpg</div>
+          </div>
         </div>
-        <div class="box">
-          <a href=""><h3>🪞Personalizacja</h3></a>
-          <p>Własne szablony graficzne, logo pary młodej lub firmy, a do tego setki gadżetów!</p>
-        </div>
-        <div class="box">
-          <a href=""><h3>🎙 Księga głosowa</h3></a>
-          <p>Goście mogą zostawić krótką wiadomość dźwiękową – hit każdego wesela!</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Sekcja kontakt -->
-  <section id="kontakt" class="section kontakt">
-    <div class="container">
-      <h2>Skontaktuj się z nami</h2>
-      <p>Masz pytania lub chcesz zarezerwować termin? Jesteśmy dostępni!</p>
-      <p><strong>📩 E-mail:</strong> kontakt@flashzone.pl</p>
-      <p><strong>📞 Telefon:</strong> 123 456 789</p>
-      <p><strong>💬 Messenger:</strong> <a href="https://www.facebook.com/FlashZoneFotobudka" target="_blank">Flash Zone na Facebooku</a></p>
+      </article>
     </div>
   </section>
 
-  <!-- Stopka -->
+  <section id="kontakt" class="container">
+    <h2>Kontakt</h2>
+    <p class="lead">Masz pytania lub chcesz sprawdzić dostępność terminu? Napisz lub zadzwoń.</p>
+    <div class="contact">
+      <div><strong>E-mail:</strong> <a href="mailto:kontakt@twojafotobudka.pl">kontakt@twojafotobudka.pl</a></div>
+      <div><strong>Telefon:</strong> <a href="tel:+48123456789">+48 123 456 789</a></div>
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; 2025 Fotobudka Flash Zone – Uchwyć swój moment 📸</p>
+    <div class="container">
+      <p>© 2025 fotobudka.flash — Wszystkie prawa zastrzeżone</p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
