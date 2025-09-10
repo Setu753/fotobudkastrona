@@ -4,23 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fotobudka — Twoje wydarzenie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="container">
+
+  <!-- NAV (ciemna belka + kolorowe social) -->
+  <nav class="container navbar">
     <a class="brand" href="#home">fotobudka.<span>flash</span></a>
+
+    <div class="spacer"></div>
+
     <div class="links">
       <a href="#home">Główna</a>
       <a href="#onas">O nas</a>
       <a id="navOferta" href="#oferta">Oferta</a>
       <a href="#kontakt">Kontakt</a>
     </div>
+
+    <div class="socials">
+      <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" rel="noopener" class="insta">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm11 1a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/>
+        </svg>
+      </a>
+      <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook" rel="noopener" class="fb">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22 12c0-5.522-4.478-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.877v-6.987H8.078V12h2.36V9.797c0-2.337 1.393-3.633 3.52-3.633.996 0 2.039.177 2.039.177v2.24h-1.149c-1.135 0-1.488.704-1.488 1.427V12h2.532l-.405 2.89h-2.127v6.987C18.343 21.128 22 16.991 22 12z"/>
+        </svg>
+      </a>
+      <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok" rel="noopener" class="tiktok">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.001 2h2.996c.15 1.328.697 2.59 1.566 3.609A6.55 6.55 0 0019.54 7h.001v3.004a9.13 9.13 0 01-3.656-.73v6.722a6.997 6.997 0 11-6.998-6.998c.238 0 .472.014.7.042v3.053a3.992 3.992 0 00-.701-.065 3.994 3.994 0 103.995 3.995V2z"/>
+        </svg>
+      </a>
+    </div>
   </nav>
 
+  <!-- HERO (biały + niebieskie „kliny”) -->
   <header id="home" class="hero">
-    <!-- Podmień obrazek w CSS lub wstaw tu <img> -->
+    <div class="hero-bg-left" aria-hidden="true"></div>
+    <div class="hero-bg-right" aria-hidden="true"></div>
+
     <div class="hero-content container">
       <h1>Uchwyć najlepsze chwile</h1>
       <p>Fotobudka i atrakcje eventowe na wesela, studniówki i imprezy firmowe. Lekki setup, szybki montaż, piękne wydruki i galeria online.</p>
@@ -28,16 +55,17 @@
     </div>
   </header>
 
+  <!-- O NAS -->
   <section id="onas" class="container">
     <h2>O nas</h2>
     <p class="lead">
-      Jesteśmy mobilną ekipą z Wielkopolski. Dowozi<strong>my sprzęt</strong>, opiekę operatora i personalizowane szablony wydruków.
+      Jesteśmy mobilną ekipą z Wielkopolski. Dowozimy sprzęt, opiekę operatora i personalizowane szablony wydruków.
       Działamy szybko i bezproblemowo — Ty się bawisz, my łapiemy emocje.
     </p>
   </section>
 
+  <!-- OFERTA (Twoje akordeony – zostawione) -->
   <section id="oferta" class="container">
-    <!-- Klikalne H2 -->
     <h2 id="ofertaToggle" role="button" tabindex="0" aria-expanded="false" aria-controls="listaPakietow">Oferta</h2>
 
     <div id="listaPakietow" class="pakiety" hidden>
@@ -48,28 +76,16 @@
           <span class="chev">▸</span>
         </button>
         <div class="content" hidden>
-          <p>Stylowy telefon, który zapisuje wiadomości od gości. Po wydarzeniu dostajesz paczkę plików audio (MP3) + opcjonalny montaż.</p>
+          <p>Stylowy telefon, który zapisuje wiadomości od gości. Po wydarzeniu otrzymujesz paczkę plików MP3 + opcjonalny montaż.</p>
           <ul class="bullets">
-            <li>Setup w strefie chill/księga gości</li>
+            <li>Strefa chill / księga gości</li>
             <li>Nielimitowane nagrania</li>
             <li>Personalizowana kartka z instrukcją</li>
           </ul>
-
-          <!-- GALERIA: podmień ścieżki na swoje -->
           <div class="gallery">
-            <figure class="tile">
-              <img src="assets/telefon.jpeg" alt="Telefon Życzeń — stanowisko" loading="lazy">
-              <figcaption>Stanowisko</figcaption>
-            </figure>
-            <figure class="tile">
-              <img src="assets/telefon2.jpeg" alt="Telefon Życzeń — detale" loading="lazy">
-              <figcaption>Detale</figcaption>
-            </figure>
-            <figure class="tile">
-              <img src="assets/telefon3.jpg" alt="Telefon Życzeń — goście nagrywają" loading="lazy">
-              <figcaption>Goście nagrywają</figcaption>
-            </figure>
-            
+            <figure class="tile"><img src="assets/telefon.jpeg" alt="Telefon Życzeń — stanowisko" loading="lazy"></figure>
+            <figure class="tile"><img src="assets/telefon2.jpeg" alt="Telefon Życzeń — detale" loading="lazy"></figure>
+            <figure class="tile"><img src="assets/telefon3.jpg" alt="Telefon Życzeń — goście nagrywają" loading="lazy"></figure>
           </div>
         </div>
       </article>
@@ -83,29 +99,17 @@
         <div class="content" hidden>
           <p>Drewniana obudowa, ciepłe światło, klasyczny look zdjęć. Idealne do rustykalnych i boho przyjęć.</p>
           <ul class="bullets">
-            <li>Wydruki 5×15 lub 10×15 z personalizacją</li>
+            <li>Wydruki 5×15 lub 10×15</li>
             <li>Gadżety w klimacie retro</li>
             <li>Galeria online + pendrive po evencie</li>
           </ul>
-      
-          <!-- GALERIA — PODMIEŃ ŚCIEŻKI NA SWOJE PLIKI -->
           <div class="gallery">
-            <figure class="tile">
-              <img src="assets/retro1.jpg" alt="Fotobudka Retro — obudowa drewniana" loading="lazy">
-              <figcaption>Obudowa drewniana</figcaption>
-            </figure>
-            <figure class="tile">
-              <img src="assets/retro2.jpeg" alt="Fotobudka Retro — stanowisko na sali" loading="lazy">
-              <figcaption>Stanowisko na sali</figcaption>
-            </figure>
-            <figure class="tile">
-              <img src="assets/retro-3.jpg" alt="Fotobudka Retro — przykładowy wydruk" loading="lazy">
-              <figcaption>Przykładowy wydruk</figcaption>
-            </figure>
+            <figure class="tile"><img src="assets/retro1.jpg" alt="Fotobudka Retro — obudowa drewniana" loading="lazy"></figure>
+            <figure class="tile"><img src="assets/retro2.jpeg" alt="Fotobudka Retro — stanowisko" loading="lazy"></figure>
+            <figure class="tile"><img src="assets/retro-3.jpg" alt="Fotobudka Retro — wydruk" loading="lazy"></figure>
           </div>
         </div>
       </article>
-      
 
       <!-- Klasyczna -->
       <article class="kategoria" id="klasyczna">
@@ -114,39 +118,31 @@
           <span class="chev">▸</span>
         </button>
         <div class="content" hidden>
-          <p>Nowoczesna fotobudka z oświetleniem i szybkim drukiem. Nielimitowane ujęcia, operator do pomocy oraz personalizowany szablon wydruku.</p>
+          <p>Nowoczesna fotobudka z oświetleniem i szybkim drukiem. Nielimitowane ujęcia, operator i personalizowany szablon wydruku.</p>
           <ul class="bullets">
-            <li>3–4 godziny pracy fotobudki</li>
+            <li>3–4 godziny pracy</li>
             <li>Nielimitowane zdjęcia + wydruki 5×15 / 10×15</li>
-            <li>Galeria online oraz pendrive po evencie</li>
+            <li>Galeria online + pendrive</li>
           </ul>
-      
           <div class="gallery">
-            <figure class="tile">
-              <img src="assets/klasyczna1.jpeg" alt="Fotobudka Klasyczna — stanowisko z gadżetami" loading="lazy">
-              <figcaption>Stanowisko z gadżetami</figcaption>
-            </figure>
-            <figure class="tile">
-              <img src="assets/klasyczna2.jpeg" alt="Fotobudka Klasyczna — namiot i budka" loading="lazy">
-              <figcaption>Namiot i budka</figcaption>
-            </figure>
+            <figure class="tile"><img src="assets/klasyczna1.jpeg" alt="Fotobudka Klasyczna — stanowisko" loading="lazy"></figure>
+            <figure class="tile"><img src="assets/klasyczna2.jpeg" alt="Fotobudka Klasyczna — namiot" loading="lazy"></figure>
           </div>
         </div>
       </article>
-      
 
-      <!-- Ciężki Dym -->
+      <!-- Ciężki dym -->
       <article class="kategoria" id="ciezki-dym">
         <button type="button" aria-expanded="false">
           <span><strong>Ciężki Dym</strong> — pierwszy taniec jak w chmurach</span>
           <span class="chev">▸</span>
         </button>
         <div class="content" hidden>
-          <p>Efekt gęstej, przyziemnej mgły. Sprzęt klasy eventowej, bez uruchamiania czujek dymu (po uzgodnieniu z salą).</p>
+          <p>Efekt gęstej, przyziemnej mgły. Sprzęt klasy eventowej (po uzgodnieniu z salą).</p>
           <ul class="bullets">
             <li>Operator i pełna obsługa</li>
-            <li>Efekt ~3–5 minut (możliwe dogenerowanie)</li>
-            <li>Wymagania: dostęp do gniazdka, brak przeciągów</li>
+            <li>Efekt ~3–5 minut</li>
+            <li>Wymagania: gniazdko, brak przeciągów</li>
           </ul>
           <div class="gallery">
             <div class="tile placeholder">assets/ciezki-dym-1.jpg</div>
@@ -157,6 +153,7 @@
     </div>
   </section>
 
+  <!-- KONTAKT -->
   <section id="kontakt" class="container">
     <h2>Kontakt</h2>
     <p class="lead">Masz pytania lub chcesz sprawdzić dostępność terminu? Napisz lub zadzwoń.</p>
@@ -166,12 +163,25 @@
     </div>
   </section>
 
-  <footer>
-    <div class="container">
-      <p>© 2025 fotobudka.flash — Wszystkie prawa zastrzeżone</p>
+  <!-- STOPKA (ciemna belka, social po lewej) -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="socials">
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" class="insta">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm11 1a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook" class="fb">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.522-4.478-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.877v-6.987H8.078V12h2.36V9.797c0-2.337 1.393-3.633 3.52-3.633.996 0 2.039.177 2.039.177v2.24h-1.149c-1.135 0-1.488.704-1.488 1.427V12h2.532l-.405 2.89h-2.127v6.987C18.343 21.128 22 16.991 22 12z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok" class="tiktok">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 2h2.996c.15 1.328.697 2.59 1.566 3.609A6.55 6.55 0 0019.54 7h.001v3.004a9.13 9.13 0 01-3.656-.73v6.722a6.997 6.997 0 11-6.998-6.998c.238 0 .472.014.7.042v3.053a3.992 3.992 0 00-.701-.065 3.994 3.994 0 103.995 3.995V2z"/></svg>
+        </a>
+      </div>
+      <small>© 2025 Fotobudka Flash. Wszelkie prawa zastrzeżone.</small>
     </div>
   </footer>
 
+  <!-- (opcjonalnie) Twój skrypt do akordeonów -->
   <script src="script.js"></script>
 </body>
 </html>
