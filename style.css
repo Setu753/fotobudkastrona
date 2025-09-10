@@ -189,4 +189,43 @@ h2{ font-size: clamp(22px, 3vw, 28px); margin:0 0 12px }
 }
 
 
+.contact-section {
+  padding: 10px 0;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(15,23,42,.06);
+}
 
+.contact-form {
+  max-width: 600px;
+  margin: 30px auto 0;
+  display: grid;
+  gap: 20px;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 2px rgba(47,95,255,.15);
+}
