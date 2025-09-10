@@ -287,3 +287,10 @@ h2{ font-size: clamp(22px, 3vw, 28px); margin:0 0 12px }
   font-weight:800;
   box-shadow:0 12px 24px rgba(47,95,255,.25);
 }
+/* Kontakt – wymuszenie wyglądu jak reszta strony (Pages cache-safe) */
+#kontakt.contact-section{
+  padding:80px 0 !important;
+  background:transparent !important;
+  backdrop-filter:none !important;
+  border-top:1px solid rgba(15,23,42,.06) !important;
+}
