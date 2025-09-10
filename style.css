@@ -294,3 +294,76 @@ h2{ font-size: clamp(22px, 3vw, 28px); margin:0 0 12px }
   backdrop-filter:none !important;
   border-top:1px solid rgba(15,23,42,.06) !important;
 }
+
+/* ===== CONTACT FINAL (dopasowane do Twojego HTML) ===== */
+section.contact-section{
+  padding:80px 0 !important;
+  background:transparent !important;   /* tło jak cała strona */
+  backdrop-filter:none !important;
+  border-top:1px solid rgba(15,23,42,.06) !important;
+}
+
+section.contact-section .container{
+  max-width:900px;
+  margin-inline:auto;
+  padding:0 20px;
+}
+
+section.contact-section h2{
+  text-align:center;
+  margin:0 0 20px;
+  font-size:clamp(22px,3vw,28px);
+  color:var(--ink);
+}
+
+section.contact-section form.contact-form{
+  max-width:720px;
+  margin:32px auto 0;
+  display:grid;
+  gap:20px;
+}
+
+section.contact-section .form-group{
+  display:flex;
+  flex-direction:column;   /* label nad polem */
+  align-items:stretch;
+}
+
+section.contact-section label{
+  display:block;
+  margin:0 0 8px;
+  font-weight:700;
+  color:var(--ink);
+}
+
+section.contact-section input,
+section.contact-section textarea{
+  width:100%;
+  box-sizing:border-box;
+  padding:14px 16px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:#fff;
+  font:inherit;
+  line-height:1.4;
+}
+
+section.contact-section textarea{
+  min-height:160px;
+  resize:vertical;
+}
+
+section.contact-section input:focus,
+section.contact-section textarea:focus{
+  outline:none;
+  border-color:var(--brand);
+  box-shadow:0 0 0 3px rgba(47,95,255,.15);
+}
+
+section.contact-section .btn{
+  width:100%;
+  padding:16px 28px;
+  border-radius:999px;
+  font-weight:800;
+  box-shadow:0 12px 24px rgba(47,95,255,.25);
+}
