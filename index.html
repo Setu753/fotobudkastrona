@@ -161,43 +161,53 @@
       </article>
     </div>
   </section>
+<!-- KONTAKT -->
+<section id="kontakt" class="container">
+  <h2>Kontakt</h2>
+  <p class="lead">Masz pytania lub chcesz sprawdzić dostępność terminu? Napisz lub zadzwoń.</p>
+  <div class="contact">
+    <div><strong>E-mail:</strong> <a href="mailto:fotobudka.flashzone@gmail.com">fotobudka.flashzone@gmail.com</a></div>
+    <div><strong>Telefon:</strong> <a href="tel:+48 573 670 563">+48 573 670 563</a></div>
+  </div>
+</section>
 
-  <!-- KONTAKT -->
-  <section id="kontakt" class="container">
-    <h2>Kontakt</h2>
-    <p class="lead">Masz pytania lub chcesz sprawdzić dostępność terminu? Napisz lub zadzwoń.</p>
-    <div class="contact">
-      <div><strong>E-mail:</strong> <a href="mailto:fotobudka.flashzone@gmail.com">fotobudka.flashzone@gmail.com</a></div>
-      <div><strong>Telefon:</strong> <a href="tel:+48 573 670 563">+48 573 670 563</a></div>
-    </div>
-  </section>
-  <section id="kontakt" class="contact-section">
-    <div class="container">
-      <h2>Masz pytania? Wypełnij formularz – odezwiemy się jak najszybciej.</h2>
-   
-  
-      <form class="contact-form" id="contactForm" action="send_mail.php" method="POST">
-        <div class="form-group">
-          <label for="name">Imię i nazwisko</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-  
-        <div class="form-group">
-          <label for="email">Adres e-mail</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-  
-        <div class="form-group">
-          <label for="message">Wiadomość</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-  
-        <button type="submit" class="btn">Wyślij</button>
-      </form>
-    </div>
-  </section>
-  
-  <script src="form.js"></script>
+<section id="formularz" class="contact-section">
+  <div class="container">
+    <h2>Masz pytania? Wypełnij formularz – odezwiemy się jak najszybciej.</h2>
+
+    <form name="kontakt-flashzone"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          action="/dziekujemy.html"
+          class="contact-form">
+
+      <!-- wymagane ukryte pola -->
+      <input type="hidden" name="form-name" value="kontakt-flashzone" />
+      <p style="display:none;">
+        <label>Nie wypełniaj tego pola: <input name="bot-field" /></label>
+      </p>
+
+      <div class="form-group">
+        <label for="name">Imię i nazwisko</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Adres e-mail</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Wiadomość</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Wyślij</button>
+    </form>
+  </div>
+</section>
+
   
   <!-- STOPKA (ciemna belka, social po lewej) -->
   <footer class="site-footer">
