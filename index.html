@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fotobudka Flashzone</title>
+    <link rel="icon" type="image/png" href="assets/logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta
+      name="description"
+      content="Wynajem fotobudki na wesele, studniówkę i imprezy firmowe. Fotobudka Flashzone zapewnia niezapomnianą zabawę i pamiątkowe zdjęcia."
+    />
+    <meta
+      name="keywords"
+      content="fotobudka, wynajem fotobudki, fotobudka wesele, fotobudka Poznań, fotobudka Gniezno"
+    />
+    <meta name="author" content="Fotobudka Flashzone" />
+  </head>
+  <body>
+    <!-- NAV (ciemna belka + kolorowe social) -->
+    <nav class="container navbar">
+      <a class="brand" href="#home">FLASH<span>ZONE</span></a>
+
+      <div class="spacer"></div>
+
+      <div class="links">
+        <a href="#home">Główna</a>
+        <a href="#onas">O nas</a>
+        <a id="navOferta" href="#oferta">Oferta</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+
+      <div class="socials">
+        <a
+          href="https://www.instagram.com/fotobudka_flashzone"
+          target="_blank"
+          aria-label="Instagram"
+          rel="noopener"
+          class="insta"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm11 1a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://www.facebook.com/profile.php?id=61556558682813"
+          target="_blank"
+          aria-label="Facebook"
+          rel="noopener"
+          class="fb"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M22 12c0-5.522-4.478-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.877v-6.987H8.078V12h2.36V9.797c0-2.337 1.393-3.633 3.52-3.633.996 0 2.039.177 2.039.177v2.24h-1.149c-1.135 0-1.488.704-1.488 1.427V12h2.532l-.405 2.89h-2.127v6.987C18.343 21.128 22 16.991 22 12z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://www.tiktok.com/@fotobudka_flashzone"
+          target="_blank"
+          aria-label="TikTok"
+          rel="noopener"
+          class="tiktok"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M12.001 2h2.996c.15 1.328.697 2.59 1.566 3.609A6.55 6.55 0 0019.54 7h.001v3.004a9.13 9.13 0 01-3.656-.73v6.722a6.997 6.997 0 11-6.998-6.998c.238 0 .472.014.7.042v3.053a3.992 3.992 0 00-.701-.065 3.994 3.994 0 103.995 3.995V2z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://wa.me/48573670563"
+          target="_blank"
+          aria-label="WhatsApp"
+          class="wa"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 32 32"
+          >
+            <path
+              fill="#25D366"
+              d="M16 .5C7.44.5.5 7.44.5 16c0 2.8.73 5.44 2.02 7.74L.5 31.5l7.96-2.1A15.43 15.43 0 0 0 16 31.5c8.56 0 15.5-6.94 15.5-15.5S24.56.5 16 .5Z"
+            />
+            <path
+              fill="#fff"
+              d="M24.26 21.43c-.34.96-1.98 1.82-2.78 1.92-.71.09-1.62.16-5.27-1.13-4.43-1.62-7.26-6.29-7.48-6.59-.21-.3-1.78-2.37-1.78-4.52 0-2.15 1.09-3.21 1.48-3.65.38-.43.83-.54 1.11-.54.27 0 .55.01.8.01.25 0 .6-.09.94.72.34.82 1.16 2.83 1.27 3.04.11.21.18.45.03.74-.15.29-.22.46-.43.71-.21.25-.44.56-.63.75-.21.21-.43.44-.19.86.25.43 1.11 1.83 2.39 2.97 1.65 1.47 3.04 1.94 3.47 2.16.43.21.68.18.93-.11.25-.29 1.07-1.24 1.36-1.67.29-.43.57-.36.94-.21.38.15 2.4 1.13 2.8 1.34.41.21.68.31.78.48.1.17.1.99-.24 1.95Z"
+            />
+          </svg>
+        </a>
+      </div>
+    </nav>
+
+    <!-- HERO (biały + niebieskie „kliny”) -->
+    <header id="home" class="hero">
+      <div class="hero-bg-left" aria-hidden="true"></div>
+      <div class="hero-bg-right" aria-hidden="true"></div>
+
+      <div class="hero-content container">
+        <h1>Uchwyć najlepsze chwile</h1>
+        <p>
+          Fotobudka i atrakcje eventowe na wesela, studniówki i imprezy firmowe.
+          Lekki setup, szybki montaż, piękne wydruki i galeria online.
+        </p>
+        <a class="btn" href="#kontakt">Zarezerwuj termin</a>
+      </div>
+    </header>
+
+    <!-- O NAS -->
+    <section id="onas" class="container">
+      <h2>O nas</h2>
+      <p class="lead">
+        Jesteśmy mobilną ekipą z Wielkopolski. Dowozimy sprzęt, opiekę operatora
+        i personalizowane szablony wydruków. Działamy szybko i bezproblemowo —
+        Ty się bawisz, my łapiemy emocje.
+      </p>
+    </section>
+
+    <!-- OFERTA (Twoje akordeony – zostawione) -->
+    <section id="oferta" class="container">
+      <h2
+        id="ofertaToggle"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+        aria-controls="listaPakietow"
+      >
+        Oferta
+      </h2>
+
+      <div id="listaPakietow" class="pakiety" hidden>
+        <!-- Telefon Życzeń -->
+        <article class="kategoria" id="tel-zyczen">
+          <button type="button" aria-expanded="false">
+            <span
+              ><strong>Telefon Życzeń</strong> — goście nagrywają życzenia
+              głosowe</span
+            >
+            <span class="chev">▸</span>
+          </button>
+          <div class="content" hidden>
+            <p>
+              Stylowy telefon, który zapisuje wiadomości od gości. Po wydarzeniu
+              otrzymujesz paczkę plików MP3 + opcjonalny montaż.
+            </p>
+            <ul class="bullets">
+              <li>Strefa chill / księga gości</li>
+              <li>Nielimitowane nagrania</li>
+              <li>Personalizowana kartka z instrukcją</li>
+            </ul>
+            <div class="gallery">
+              <figure class="tile">
+                <img
+                  src="assets/telefon.jpeg"
+                  alt="Telefon Życzeń — stanowisko"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="tile">
+                <img
+                  src="assets/telefon2.jpeg"
+                  alt="Telefon Życzeń — detale"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="tile">
+                <img
+                  src="assets/telefon3.jpg"
+                  alt="Telefon Życzeń — goście nagrywają"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <!-- Retro -->
+        <article class="kategoria" id="retro">
+          <button type="button" aria-expanded="false">
+            <span><strong>Retro</strong> — fotobudka w klimacie vintage</span>
+            <span class="chev">▸</span>
+          </button>
+          <div class="content" hidden>
+            <p>
+              Drewniana obudowa, ciepłe światło, klasyczny look zdjęć. Idealne
+              do rustykalnych i boho przyjęć.
+            </p>
+            <ul class="bullets">
+              <li>Wydruki 5×15 lub 10×15</li>
+              <li>Gadżety w klimacie retro</li>
+              <li>Galeria online + pendrive po evencie</li>
+            </ul>
+            <div class="gallery">
+              <figure class="tile">
+                <img
+                  src="assets/retro1.jpg"
+                  alt="Fotobudka Retro — obudowa drewniana"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="tile">
+                <img
+                  src="assets/retro2.jpeg"
+                  alt="Fotobudka Retro — stanowisko"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="tile">
+                <img
+                  src="assets/retro-3.jpg"
+                  alt="Fotobudka Retro — wydruk"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <!-- Klasyczna -->
+        <article class="kategoria" id="klasyczna">
+          <button type="button" aria-expanded="false">
+            <span
+              ><strong>Klasyczna</strong> — uniwersalny hit każdej imprezy</span
+            >
+            <span class="chev">▸</span>
+          </button>
+          <div class="content" hidden>
+            <p>
+              Nowoczesna fotobudka z oświetleniem i szybkim drukiem.
+              Nielimitowane ujęcia, operator i personalizowany szablon wydruku.
+            </p>
+            <ul class="bullets">
+              <li>3–4 godziny pracy</li>
+              <li>Nielimitowane zdjęcia + wydruki 5×15 / 10×15</li>
+              <li>Galeria online + pendrive</li>
+            </ul>
+            <div class="gallery">
+              <figure class="tile">
+                <img
+                  src="assets/klasyczna1.jpeg"
+                  alt="Fotobudka Klasyczna — stanowisko"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="tile">
+                <img
+                  src="assets/klasyczna2.jpeg"
+                  alt="Fotobudka Klasyczna — namiot"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ciężki dym -->
+        <article class="kategoria" id="ciezki-dym">
+          <button type="button" aria-expanded="false">
+            <span
+              ><strong>Ciężki Dym</strong> — pierwszy taniec jak w
+              chmurach</span
+            >
+            <span class="chev">▸</span>
+          </button>
+          <div class="content" hidden>
+            <p>
+              Efekt gęstej, przyziemnej mgły. Sprzęt klasy eventowej (po
+              uzgodnieniu z salą).
+            </p>
+            <ul class="bullets">
+              <li>Operator i pełna obsługa</li>
+              <li>Efekt ~3–5 minut</li>
+              <li>Wymagania: gniazdko, brak przeciągów</li>
+            </ul>
+            <div class="gallery">
+              <div class="tile placeholder">assets/ciezki-dym-1.jpg</div>
+              <div class="tile placeholder">assets/ciezki-dym-2.jpg</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- KONTAKT -->
+    <section id="kontakt" class="container">
+      <h2>Kontakt</h2>
+      <p class="lead">
+        Masz pytania lub chcesz sprawdzić dostępność terminu? Napisz lub
+        zadzwoń.
+      </p>
+      <div class="contact">
+        <div>
+          <strong>E-mail:</strong>
+          <a href="mailto:fotobudka.flashzone@gmail.com"
+            >fotobudka.flashzone@gmail.com</a
+          >
+        </div>
+        <div>
+          <strong>Telefon:</strong>
+          <a href="tel:+48 573 670 563">+48 573 670 563</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="formularz" class="contact-section">
+      <div class="container">
+        <h2>
+          Masz pytania? Wypełnij formularz – odezwiemy się jak najszybciej.
+        </h2>
+
+        <form
+          name="kontakt-flashzone"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          action="/thankyou.html"
+          class="contact-form"
+        >
+          <!-- wymagane ukryte pola -->
+          <input type="hidden" name="form-name" value="kontakt-flashzone" />
+          <p style="display: none">
+            <label>Nie wypełniaj tego pola: <input name="bot-field" /></label>
+          </p>
+
+          <div class="form-group">
+            <label for="name">Imię i nazwisko</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Adres e-mail</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Wiadomość</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn">Wyślij</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- STOPKA (ciemna belka, social po lewej) -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="socials">
+          <a
+            href="https://www.instagram.com/fotobudka_flashzone"
+            target="_blank"
+            aria-label="Instagram"
+            class="insta"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm11 1a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61556558682813"
+            target="_blank"
+            aria-label="Facebook"
+            class="fb"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M22 12c0-5.522-4.478-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.877v-6.987H8.078V12h2.36V9.797c0-2.337 1.393-3.633 3.52-3.633.996 0 2.039.177 2.039.177v2.24h-1.149c-1.135 0-1.488.704-1.488 1.427V12h2.532l-.405 2.89h-2.127v6.987C18.343 21.128 22 16.991 22 12z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.tiktok.com/@fotobudka_flashzone"
+            target="_blank"
+            aria-label="TikTok"
+            class="tiktok"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12.001 2h2.996c.15 1.328.697 2.59 1.566 3.609A6.55 6.55 0 0019.54 7h.001v3.004a9.13 9.13 0 01-3.656-.73v6.722a6.997 6.997 0 11-6.998-6.998c.238 0 .472.014.7.042v3.053a3.992 3.992 0 00-.701-.065 3.994 3.994 0 103.995 3.995V2z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://wa.me/48573670563"
+            target="_blank"
+            aria-label="WhatsApp"
+            class="wa"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 32 32"
+            >
+              <path
+                fill="#25D366"
+                d="M16 .5C7.44.5.5 7.44.5 16c0 2.8.73 5.44 2.02 7.74L.5 31.5l7.96-2.1A15.43 15.43 0 0 0 16 31.5c8.56 0 15.5-6.94 15.5-15.5S24.56.5 16 .5Z"
+              />
+              <path
+                fill="#fff"
+                d="M24.26 21.43c-.34.96-1.98 1.82-2.78 1.92-.71.09-1.62.16-5.27-1.13-4.43-1.62-7.26-6.29-7.48-6.59-.21-.3-1.78-2.37-1.78-4.52 0-2.15 1.09-3.21 1.48-3.65.38-.43.83-.54 1.11-.54.27 0 .55.01.8.01.25 0 .6-.09.94.72.34.82 1.16 2.83 1.27 3.04.11.21.18.45.03.74-.15.29-.22.46-.43.71-.21.25-.44.56-.63.75-.21.21-.43.44-.19.86.25.43 1.11 1.83 2.39 2.97 1.65 1.47 3.04 1.94 3.47 2.16.43.21.68.18.93-.11.25-.29 1.07-1.24 1.36-1.67.29-.43.57-.36.94-.21.38.15 2.4 1.13 2.8 1.34.41.21.68.31.78.48.1.17.1.99-.24 1.95Z"
+              />
+            </svg>
+          </a>
+        </div>
+        <small>© 2025 Fotobudka Flash. Wszelkie prawa zastrzeżone.</small>
+      </div>
+    </footer>
+
+    <!-- (opcjonalnie) Twój skrypt do akordeonów -->
+    <script src="script.js"></script>
+  </body>
+</html>
