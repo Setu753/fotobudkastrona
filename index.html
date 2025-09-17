@@ -150,170 +150,384 @@
       </p>
     </section>
 
-    <!-- OFERTA (Twoje akordeony – zostawione) -->
-    <section id="oferta" class="container">
-      <h2
-        id="ofertaToggle"
-        role="button"
-        tabindex="0"
-        aria-expanded="false"
-        aria-controls="listaPakietow"
-      >
-        Oferta
-      </h2>
+<!-- OFERTA -->
+<section id="oferta" class="container">
+  <h2
+    id="ofertaToggle"
+    role="button"
+    tabindex="0"
+    aria-expanded="false"
+    aria-controls="listaPakietow"
+  >
+    Oferta
+  </h2>
 
-      <div id="listaPakietow" class="pakiety" hidden>
-        <!-- Telefon Życzeń -->
-        <article class="kategoria" id="tel-zyczen">
-          <button type="button" aria-expanded="false">
-            <span
-              ><strong>Telefon Życzeń</strong> — goście nagrywają życzenia
-              głosowe</span
-            >
-            <span class="chev">▸</span>
-          </button>
-          <div class="content" hidden>
-            <p>
-              Stylowy telefon, który zapisuje wiadomości od gości. Po wydarzeniu
-              otrzymujesz paczkę plików MP3 + opcjonalny montaż.
-            </p>
-            <ul class="bullets">
-              <li>Strefa chill / księga gości</li>
-              <li>Nielimitowane nagrania</li>
-              <li>Personalizowana kartka z instrukcją</li>
-            </ul>
-            <div class="gallery">
-              <figure class="tile">
-                <img
-                  src="assets/telefon.jpeg"
-                  alt="Telefon Życzeń — stanowisko"
-                  loading="lazy"
-                />
-              </figure>
-              <figure class="tile">
-                <img
-                  src="assets/telefon2.jpeg"
-                  alt="Telefon Życzeń — detale"
-                  loading="lazy"
-                />
-              </figure>
-              <figure class="tile">
-                <img
-                  src="assets/telefon3.jpg"
-                  alt="Telefon Życzeń — goście nagrywają"
-                  loading="lazy"
-                />
-              </figure>
-            </div>
-          </div>
-        </article>
+  <div id="listaPakietow" class="pakiety" hidden>
 
-        <!-- Retro -->
-        <article class="kategoria" id="retro">
-          <button type="button" aria-expanded="false">
-            <span><strong>Retro</strong> — fotobudka w klimacie vintage</span>
-            <span class="chev">▸</span>
-          </button>
-          <div class="content" hidden>
-            <p>
-              Drewniana obudowa, ciepłe światło, klasyczny look zdjęć. Idealne
-              do rustykalnych i boho przyjęć.
-            </p>
-            <ul class="bullets">
-              <li>Wydruki 5×15 lub 10×15</li>
-              <li>Gadżety w klimacie retro</li>
-              <li>Galeria online + pendrive po evencie</li>
-            </ul>
-            <div class="gallery">
-              <figure class="tile">
-                <img
-                  src="assets/retro1.jpg"
-                  alt="Fotobudka Retro — obudowa drewniana"
-                  loading="lazy"
-                />
-              </figure>
-              <figure class="tile">
-                <img
-                  src="assets/retro2.jpeg"
-                  alt="Fotobudka Retro — stanowisko"
-                  loading="lazy"
-                />
-              </figure>
-              <figure class="tile">
-                <img
-                  src="assets/retro-3.jpg"
-                  alt="Fotobudka Retro — wydruk"
-                  loading="lazy"
-                />
-              </figure>
-            </div>
-          </div>
-        </article>
-
-        <!-- Klasyczna -->
-        <article class="kategoria" id="klasyczna">
-          <button type="button" aria-expanded="false">
-            <span
-              ><strong>Klasyczna</strong> — uniwersalny hit każdej imprezy</span
-            >
-            <span class="chev">▸</span>
-          </button>
-          <div class="content" hidden>
-            <p>
-              Nowoczesna fotobudka z oświetleniem i szybkim drukiem.
-              Nielimitowane ujęcia, operator i personalizowany szablon wydruku.
-            </p>
-            <ul class="bullets">
-              <li>3–4 godziny pracy</li>
-              <li>Nielimitowane zdjęcia + wydruki 5×15 / 10×15</li>
-              <li>Galeria online + pendrive</li>
-            </ul>
-            <div class="gallery">
-              <figure class="tile">
-                <img
-                  src="assets/klasyczna1.jpeg"
-                  alt="Fotobudka Klasyczna — stanowisko"
-                  loading="lazy"
-                />
-              </figure>
-              <figure class="tile">
-                <img
-                  src="assets/klasyczna2.jpeg"
-                  alt="Fotobudka Klasyczna — namiot"
-                  loading="lazy"
-                />
-              </figure>
-            </div>
-          </div>
-        </article>
-
-        <!-- Ciężki dym -->
-        <article class="kategoria" id="ciezki-dym">
-          <button type="button" aria-expanded="false">
-            <span
-              ><strong>Ciężki Dym</strong> — pierwszy taniec jak w
-              chmurach</span
-            >
-            <span class="chev">▸</span>
-          </button>
-          <div class="content" hidden>
-            <p>
-              Efekt gęstej, przyziemnej mgły. Sprzęt klasy eventowej (po
-              uzgodnieniu z salą).
-            </p>
-            <ul class="bullets">
-              <li>Operator i pełna obsługa</li>
-              <li>Efekt ~3–5 minut</li>
-              <li>Wymagania: gniazdko, brak przeciągów</li>
-            </ul>
-            <div class="gallery">
-              <div class="tile placeholder">assets/ciezki-dym-1.jpg</div>
-              <div class="tile placeholder">assets/ciezki-dym-2.jpg</div>
-            </div>
-          </div>
-        </article>
+    <!-- 1) Fotobudka Klasyczna -->
+    <article class="kategoria" id="klasyczna">
+      <button type="button" aria-expanded="false">
+        <span><strong>Fotobudka Klasyczna</strong></span>
+        <span class="chev">▸</span>
+      </button>
+      <div class="content" hidden>
+        <p>
+          Tradycyjna fotobudka, atrakcja, która będzie pasować do każdego typu wydarzenia. Klasyczna elegancja, która zawsze jest w modzie. Świetna zabawa i pamiątki w postaci zdjęć zostają na zawsze w albumach 
+          Możliwość wydruku zdjęć w dwóch formatach: Paski, oraz pocztówka a na każdym z nich są trzy zdjęcia. Po każdej serii jest możliwość dodania do zdjęć emotikony czy namalowania czegoś - ta funkcja jest bardzo lubiana przez dzieci
+        </p>
+        <h4>W pakiecie:</h4>
+        <ul class="bullets">
+          <li>Ilość zdjęć i wydruków jest nielimitowana, co oznacza, że nikt nie wyjdzie bez własnego zdjęcia! :)</li>
+          <li>Indywidualnie zrobione ramki - nie tylko napis, ale cała grafika, która znajduje się na wydruku </li>
+          <li>Dowolne tło / kabina LED/ Technologia Green Screen</li>
+          <li>Pendrive ze zdjęciami zrobionymi podczas wydarzenia lub wysłanie ich transferem internetowym</li>
+          <li>Niezbędne gadżety</li>
+          <li>Asystent przez cały czas wynajmu</li>
+        </ul>
+        <h4>Możliwość:</h4>
+        <ul class="bullets">
+          <li>Dodania jeszcze jednego formatu zdjęcia - jedno duże zdjęcia</li>
+          <li>Spersonalizowania loyautu - robimy szatę graficzną naszej fotobudki pasującą do Twojego wydarzenia. Może to być logo / reklama Twojej firmy, wzór z zaproszeń na uroczystość, albo zdjęcia z dzieciństwa lub narzeczeńskiej. </li>
+          <li>Zamówienia personalizowanych, drewnianych tabliczek do zdjęć np. “Państwo Kowalscy”</li>
+          <li>Zamówienia okularów w serca z datą lub imionami</li>
+          <li>Zamówienia Księgi Gośc</li>
+        </ul>
       </div>
-    </section>
+    </article>
+
+    <!-- 2) Fotobudka Drewniana -->
+    <article class="kategoria" id="drewniana">
+      <button type="button" aria-expanded="false">
+        <span><strong>Fotobudka Drewniana</strong></span>
+        <span class="chev">▸</span>
+      </button>
+      <div class="content" hidden>
+        <p>
+          Fotobudka drewniana - idealnie wpasuje się w klimat imprez boho, rustykalnych, czy klimat lat xx wieku. Fotobudka stoi na drewnianym trójnogu, co dodaje jej jeszcze większego uroku! Dopoełnia ją drewniany loyat na wyświetlaczu, który dodatkowo pomoże wczuć się w styl wydarzenia - dla niektóych szczegół, ale to szczegóły sprawiają, że impreza jest na najwyższym poziomie! 🙂 
+          Możliwość wydruku zdjęć w dwóch formatach: Paski, pocztówka a na każdym z nich są trzy zdjęcia. Po każdej serii jest możliwość dodania do zdjęć emotikony czy namalowania czegoś - ta funkcja jest bardzo lubiana przez dzieci
+        </p>
+        <h4>W pakiecie:</h4>
+        <ul class="bullets">
+          <li>Ilość zdjęć i wydruków jest nielimitowana, co oznacza, że nikt nie wyjdzie bez własnego zdjęcia! :)</li>
+          <li>Indywidualnie zrobione ramki - nie tylko napis, ale cała grafika, która znajduje się na wydruku </li>
+          <li>Dowolne tło / kabina LED/ Technologia Green Screen</li>
+          <li>Pendrive ze zdjęciami zrobionymi podczas wydarzenia lub wysłanie ich transferem internetowym</li>
+          <li>Niezbędne gadżety</li>
+          <li>Asystent przez cały czas wynajmu</li>
+        </ul>
+        <h4>Możliwość:</h4>
+        <ul class="bullets">
+          <li>Dodania jeszcze jednego formatu zdjęcia - jedno duże zdjęcie</li>
+          <li>Spersonalizowania loyautu - robimy szatę graficzną naszej fotobudki pasującą do Twojego wydarzenia. Może to być logo / reklama Twojej firmy, wzór z zaproszeń na uroczystość, albo zdjęcia z dzieciństwa lub narzeczeńskiej. </li>
+          <li>Zamówienia personalizowanych, drewnianych tabliczek do zdjęć np. “Państwo Kowalscy”</li>
+          <li>Zamówienia okularów w serca z datą lub imionami</li>
+          <li>Zamówienia Księgi Gości</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 3) Fotobudka 360 / Wideobrama -->
+    <article class="kategoria" id="wideobrama">
+      <button type="button" aria-expanded="false">
+        <span><strong>Fotobudka 360 / Wideobrama</strong></span>
+        <span class="chev">▸</span>
+      </button>
+      <div class="content" hidden>
+        <p>
+          fotobudka 360 / wideobrama - Jedyna taka w okolicy! To nie jest zwykła wideobudka 360 - to nowoczesna, dużo większa, bezpieczniejsza i efektowniejsza forma fotobudki 360. Gwarantujemy, że zrobi wrażenie na każdym kto ją zobaczy!
+          Czym się rózni od zwykłych 360-tek z platformą? Przede wszystkim jej brakiem! Dzięki czemu na jednym nagraniu możemy pomieścić dużo więcej osób i dalej będą miały swobodę do poruszania się, nikt się nie zsunie i nie spadnie, nie ma drgań, które często widać na filmikach u konkurencji. Fotobudka Overhead wyróżnia się też tym, że ramię telefonu jest od góry, dzięki czemu nikt się o nie oprze. Efekt WOW gwarantowany!
+          UWAGA! Wideobrama może być używana nie tylko jako fotobudka. Swoje zastosowanie może znaleźć w reklamie, w prezentacji zawodników na zawodach sportowych, gości w programach, gwiazd na koncertach, sprzedaży i wiele innych!
+        </p>
+        <h4>W pakiecie:</h4>
+        <ul class="bullets">
+          <li>Indywidualnie zrobiona nakładka</li>
+          <li>Kod QR, SMS z linkiem do wszystkich nagrań</li>
+          <li>Podkład muzyczny do każdego filmiku</li>
+          <li>Muzykę live jeżeli nie słychać co gra DJ ;)</li>
+          <li>Bańki mydlane oraz dym</li>
+          <li>Wszystkie nagrania na pendrive lub wysłane transferem po imprezie</li>
+          <li>Pełno gadżetów</li>
+        </ul>
+        <h4>Możliwość:</h4>
+        <ul class="bullets">
+          <li>Wydrukowania zdjęć z fotobudki</li>
+          <li>Zamówienia personalizowanych, drewnianych tabliczek</li>
+          <li>Zamówienia okularów w serca z datą lub imionami</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 4) Ciężki dym -->
+    <article class="kategoria" id="ciezki-dym">
+      <button type="button" aria-expanded="false">
+        <span><strong>Ciężki dym</strong></span>
+        <span class="chev">▸</span>
+      </button>
+      <div class="content" hidden>
+        <p>
+          Ciężki dym – Będziecie brać ślub i chcecie aby Wasz pierwszy taniec był magiczny? Musicie mieć taniec w chmurach! Gęsta mgła, która zrobi wrażenie na  każdym sprawi, że poczujecie się jeszcze bardziej wyjątkowo a zdjęcia z tych pięknych chwil będą przepiękne! Ciężki dym potrafi również zakryć małe niedociągnięcia w krokach tanecznych ;)
+          Ciężki dym znajduje swoje zastosowanie podczas nagrywania teledysków, koncertów i wielu innych wydarzeń i sytuacji, które wymagają efektu mgły / chmury
+        </p>
+      </div>
+    </article>
+
+    <!-- 5) Telefon Życzeń -->
+    <article class="kategoria" id="telefon-zyczen">
+      <button type="button" aria-expanded="false">
+        <span><strong>Telefon Życzeń</strong></span>
+        <span class="chev">▸</span>
+      </button>
+      <div class="content" hidden>
+        <p>
+          Telefon Życzeń – to urządzenie nie duże, nie drogie a daje mnóstwo radości, wspomnień, śmiechu a nawet pozwala cofnąć się w czasie! Do czego służy? Służy do zostawiania wiadomości takich jak zostawia się gdy nie możecie się do kogoś dodzwonić i odsłuchacie automatycznej sekretarki. Działanie jest banalnie proste! Wysyłacie nagranie (np.: „Cześć tu Zuza i Gracjan! Nie możemy teraz podejść do telefonu, bo tańczymy na naszym weselu, zostaw wiadomość i wracaj na parkiet!”) my to nagranie umieszczamy w telefonie. Każdy kto podniesie słuchawkę na waszej imprezie usłyszy to nagranie a następnie składa życzenia, wspomina, mówi żarty… Wszystkie nagrania się zapisują a my je Wam wysyłamy! ☺ Uwierzie! Kreatywność gości nie zna granic! ☺
+        </p>
+      </div>
+    </article>
+
+    <!-- 6) Aparat Instax -->
+    <article class="kategoria" id="instax">
+      <button type="button" aria-expanded="false">
+        <span><strong>Aparat Instax</strong></span>
+        <span class="chev">▸</span>
+      </button>
+      <div class="content" hidden>
+        <p>
+          Aparat Instax – Idealny na mniejsze przyjęcia, wieczory kawalerskie, panieńskie, wakacje, domówki… Robisz zdjęcie i w sekundę masz je w ręce! Format tego zdjęcia jest niepowtarzalny i wyjątkowy! Wasze zdjęcia z przyjaciółmi w takim formacie będą się pięknie prezentować w Waszych salonach! ☺
+        </p>
+      </div>
+    </article>
+
+    <!-- 7) Fontanny Iskier -->
+    <article class="kategoria" id="fontanny">
+      <button type="button" aria-expanded="false">
+        <span><strong>Fontanny Iskier</strong></span>
+        <span class="chev">▸</span>
+      </button>
+      <div class="content" hidden>
+        <p>
+          Fontanny Iskier -  efektowne iskry sceniczne to idealne dopełnienie pierwszego tańca z ciężkim dymem, ale równie efektownie będzie wyglądał przy prezentacji tortu! ☺ To nie tylko atrakcja weselna – profesjonalna nazwa takich fontann to ISKRY SCENICZNE, co oznacza, że świetnie nadają się na różnego rodzaju eventy
+        </p>
+      </div>
+    </article>
+
+    <!-- 8) Kolorowe Wystrzały -->
+    <article class="kategoria" id="kolorowe">
+      <button type="button" aria-expanded="false">
+        <span><strong>Kolorowe Wystrzały</strong></span>
+        <span class="chev">▸</span>
+      </button>
+      <div class="content" hidden>
+        <p>
+          Kolorowe wystrzały – jeżeli na zdjęciach widzieliście kolorowe race za Młodą Parą to jest właśnie to! I na pewno wiecie jak wychodzą przy tym zdjęcia! To jest coś co zrobi ogromne wrażenie na Waszych gościach i na Was jak tylko zobaczycie zdjęcia! Możemy je wystrzelić w dowolnym momencie – przed kościołem, z tortem, przy ślubie cywilnym w ogrodzie – kiedykolwiek i gdziekolwiek chcecie wrażenie zrobi zawsze takie samo
+        </p>
+      </div>
+    </article>
+
+    <!-- 9) A już za niedługo -->
+    <article class="kategoria" id="wkrotce">
+      <button type="button" aria-expanded="false">
+        <span><strong>A już za niedługo...</strong></span>
+        <span class="chev">▸</span>
+      </button>
+      <div class="content" hidden>
+        <ul class="bullets">
+          <li>Fotobox Magazyn</li>
+          <li>Wiatraki iskier</li>
+          <li>Wodospad iskier</li>
+          <li>Wystrzałowe balony</li>
+          <li>Bańki mydlane</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+  <div id="listaPakietow" class="pakiety" hidden>
+
+    <!-- 1) Fotobudka Klasyczna -->
+    <article class="kategoria" id="klasyczna">
+      <button type="button" aria-expanded="false">
+        <span><strong>Fotobudka Klasyczna</strong></span>
+        <span class="chev">▸</span>
+      </button>
+      <div class="content" hidden>
+        <p>
+          Tradycyjna fotobudka, atrakcja, która będzie pasować do każdego typu wydarzenia. Klasyczna elegancja, która zawsze jest w modzie. Świetna zabawa i pamiątki w postaci zdjęć zostają na zawsze w albumach 
+          Możliwość wydruku zdjęć w dwóch formatach: Paski, oraz pocztówka a na każdym z nich są trzy zdjęcia. Po każdej serii jest możliwość dodania do zdjęć emotikony czy namalowania czegoś - ta funkcja jest bardzo lubiana przez dzieci
+        </p>
+        <h4>W pakiecie:</h4>
+        <ul class="bullets">
+          <li>Ilość zdjęć i wydruków jest nielimitowana, co oznacza, że nikt nie wyjdzie bez własnego zdjęcia! :)</li>
+          <li>Indywidualnie zrobione ramki - nie tylko napis, ale cała grafika, która znajduje się na wydruku </li>
+          <li>Dowolne tło / kabina LED/ Technologia Green Screen</li>
+          <li>Pendrive ze zdjęciami zrobionymi podczas wydarzenia lub wysłanie ich transferem internetowym</li>
+          <li>Niezbędne gadżety</li>
+          <li>Asystent przez cały czas wynajmu</li>
+        </ul>
+        <h4>Możliwość:</h4>
+        <ul class="bullets">
+          <li>Dodania jeszcze jednego formatu zdjęcia - jedno duże zdjęcia</li>
+          <li>Spersonalizowania loyautu - robimy szatę graficzną naszej fotobudki pasującą do Twojego wydarzenia. Może to być logo / reklama Twojej firmy, wzór z zaproszeń na uroczystość, albo zdjęcia z dzieciństwa lub narzeczeńskiej. </li>
+          <li>Zamówienia personalizowanych, drewnianych tabliczek do zdjęć np. “Państwo Kowalscy”</li>
+          <li>Zamówienia okularów w serca z datą lub imionami</li>
+          <li>Zamówienia Księgi Gośc</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 2) Fotobudka Drewniana -->
+    <article class="kategoria" id="drewniana">
+      <button type="button" aria-expanded="false">
+        <span><strong>Fotobudka Drewniana</strong></span>
+        <span class="chev">▸</span>
+      </button>
+      <div class="content" hidden>
+        <p>
+          Fotobudka drewniana - idealnie wpasuje się w klimat imprez boho, rustykalnych, czy klimat lat xx wieku. Fotobudka stoi na drewnianym trójnogu, co dodaje jej jeszcze większego uroku! Dopoełnia ją drewniany loyat na wyświetlaczu, który dodatkowo pomoże wczuć się w styl wydarzenia - dla niektóych szczegół, ale to szczegóły sprawiają, że impreza jest na najwyższym poziomie! 🙂 
+          Możliwość wydruku zdjęć w dwóch formatach: Paski, pocztówka a na każdym z nich są trzy zdjęcia. Po każdej serii jest możliwość dodania do zdjęć emotikony czy namalowania czegoś - ta funkcja jest bardzo lubiana przez dzieci
+        </p>
+        <h4>W pakiecie:</h4>
+        <ul class="bullets">
+          <li>Ilość zdjęć i wydruków jest nielimitowana, co oznacza, że nikt nie wyjdzie bez własnego zdjęcia! :)</li>
+          <li>Indywidualnie zrobione ramki - nie tylko napis, ale cała grafika, która znajduje się na wydruku </li>
+          <li>Dowolne tło / kabina LED/ Technologia Green Screen</li>
+          <li>Pendrive ze zdjęciami zrobionymi podczas wydarzenia lub wysłanie ich transferem internetowym</li>
+          <li>Niezbędne gadżety</li>
+          <li>Asystent przez cały czas wynajmu</li>
+        </ul>
+        <h4>Możliwość:</h4>
+        <ul class="bullets">
+          <li>Dodania jeszcze jednego formatu zdjęcia - jedno duże zdjęcie</li>
+          <li>Spersonalizowania loyautu - robimy szatę graficzną naszej fotobudki pasującą do Twojego wydarzenia. Może to być logo / reklama Twojej firmy, wzór z zaproszeń na uroczystość, albo zdjęcia z dzieciństwa lub narzeczeńskiej. </li>
+          <li>Zamówienia personalizowanych, drewnianych tabliczek do zdjęć np. “Państwo Kowalscy”</li>
+          <li>Zamówienia okularów w serca z datą lub imionami</li>
+          <li>Zamówienia Księgi Gości</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 3) Fotobudka 360 / Wideobrama -->
+    <article class="kategoria" id="wideobrama">
+      <button type="button" aria-expanded="false">
+        <span><strong>Fotobudka 360 / Wideobrama</strong></span>
+        <span class="chev">▸</span>
+      </button>
+      <div class="content" hidden>
+        <p>
+          fotobudka 360 / wideobrama - Jedyna taka w okolicy! To nie jest zwykła wideobudka 360 - to nowoczesna, dużo większa, bezpieczniejsza i efektowniejsza forma fotobudki 360. Gwarantujemy, że zrobi wrażenie na każdym kto ją zobaczy!
+          Czym się rózni od zwykłych 360-tek z platformą? Przede wszystkim jej brakiem! Dzięki czemu na jednym nagraniu możemy pomieścić dużo więcej osób i dalej będą miały swobodę do poruszania się, nikt się nie zsunie i nie spadnie, nie ma drgań, które często widać na filmikach u konkurencji. Fotobudka Overhead wyróżnia się też tym, że ramię telefonu jest od góry, dzięki czemu nikt się o nie oprze. Efekt WOW gwarantowany!
+          UWAGA! Wideobrama może być używana nie tylko jako fotobudka. Swoje zastosowanie może znaleźć w reklamie, w prezentacji zawodników na zawodach sportowych, gości w programach, gwiazd na koncertach, sprzedaży i wiele innych!
+        </p>
+        <h4>W pakiecie:</h4>
+        <ul class="bullets">
+          <li>Indywidualnie zrobiona nakładka</li>
+          <li>Kod QR, SMS z linkiem do wszystkich nagrań</li>
+          <li>Podkład muzyczny do każdego filmiku</li>
+          <li>Muzykę live jeżeli nie słychać co gra DJ ;)</li>
+          <li>Bańki mydlane oraz dym</li>
+          <li>Wszystkie nagrania na pendrive lub wysłane transferem po imprezie</li>
+          <li>Pełno gadżetów</li>
+        </ul>
+        <h4>Możliwość:</h4>
+        <ul class="bullets">
+          <li>Wydrukowania zdjęć z fotobudki</li>
+          <li>Zamówienia personalizowanych, drewnianych tabliczek</li>
+          <li>Zamówienia okularów w serca z datą lub imionami</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 4) Ciężki dym -->
+    <article class="kategoria" id="ciezki-dym">
+      <button type="button" aria-expanded="false">
+        <span><strong>Ciężki dym</strong></span>
+        <span class="chev">▸</span>
+      </button>
+      <div class="content" hidden>
+        <p>
+          Ciężki dym – Będziecie brać ślub i chcecie aby Wasz pierwszy taniec był magiczny? Musicie mieć taniec w chmurach! Gęsta mgła, która zrobi wrażenie na  każdym sprawi, że poczujecie się jeszcze bardziej wyjątkowo a zdjęcia z tych pięknych chwil będą przepiękne! Ciężki dym potrafi również zakryć małe niedociągnięcia w krokach tanecznych ;)
+          Ciężki dym znajduje swoje zastosowanie podczas nagrywania teledysków, koncertów i wielu innych wydarzeń i sytuacji, które wymagają efektu mgły / chmury
+        </p>
+      </div>
+    </article>
+
+    <!-- 5) Telefon Życzeń -->
+    <article class="kategoria" id="telefon-zyczen">
+      <button type="button" aria-expanded="false">
+        <span><strong>Telefon Życzeń</strong></span>
+        <span class="chev">▸</span>
+      </button>
+      <div class="content" hidden>
+        <p>
+          Telefon Życzeń – to urządzenie nie duże, nie drogie a daje mnóstwo radości, wspomnień, śmiechu a nawet pozwala cofnąć się w czasie! Do czego służy? Służy do zostawiania wiadomości takich jak zostawia się gdy nie możecie się do kogoś dodzwonić i odsłuchacie automatycznej sekretarki. Działanie jest banalnie proste! Wysyłacie nagranie (np.: „Cześć tu Zuza i Gracjan! Nie możemy teraz podejść do telefonu, bo tańczymy na naszym weselu, zostaw wiadomość i wracaj na parkiet!”) my to nagranie umieszczamy w telefonie. Każdy kto podniesie słuchawkę na waszej imprezie usłyszy to nagranie a następnie składa życzenia, wspomina, mówi żarty… Wszystkie nagrania się zapisują a my je Wam wysyłamy! ☺ Uwierzie! Kreatywność gości nie zna granic! ☺
+        </p>
+      </div>
+    </article>
+
+    <!-- 6) Aparat Instax -->
+    <article class="kategoria" id="instax">
+      <button type="button" aria-expanded="false">
+        <span><strong>Aparat Instax</strong></span>
+        <span class="chev">▸</span>
+      </button>
+      <div class="content" hidden>
+        <p>
+          Aparat Instax – Idealny na mniejsze przyjęcia, wieczory kawalerskie, panieńskie, wakacje, domówki… Robisz zdjęcie i w sekundę masz je w ręce! Format tego zdjęcia jest niepowtarzalny i wyjątkowy! Wasze zdjęcia z przyjaciółmi w takim formacie będą się pięknie prezentować w Waszych salonach! ☺
+        </p>
+      </div>
+    </article>
+
+    <!-- 7) Fontanny Iskier -->
+    <article class="kategoria" id="fontanny">
+      <button type="button" aria-expanded="false">
+        <span><strong>Fontanny Iskier</strong></span>
+        <span class="chev">▸</span>
+      </button>
+      <div class="content" hidden>
+        <p>
+          Fontanny Iskier -  efektowne iskry sceniczne to idealne dopełnienie pierwszego tańca z ciężkim dymem, ale równie efektownie będzie wyglądał przy prezentacji tortu! ☺ To nie tylko atrakcja weselna – profesjonalna nazwa takich fontann to ISKRY SCENICZNE, co oznacza, że świetnie nadają się na różnego rodzaju eventy
+        </p>
+      </div>
+    </article>
+
+    <!-- 8) Kolorowe Wystrzały -->
+    <article class="kategoria" id="kolorowe">
+      <button type="button" aria-expanded="false">
+        <span><strong>Kolorowe Wystrzały</strong></span>
+        <span class="chev">▸</span>
+      </button>
+      <div class="content" hidden>
+        <p>
+          Kolorowe wystrzały – jeżeli na zdjęciach widzieliście kolorowe race za Młodą Parą to jest właśnie to! I na pewno wiecie jak wychodzą przy tym zdjęcia! To jest coś co zrobi ogromne wrażenie na Waszych gościach i na Was jak tylko zobaczycie zdjęcia! Możemy je wystrzelić w dowolnym momencie – przed kościołem, z tortem, przy ślubie cywilnym w ogrodzie – kiedykolwiek i gdziekolwiek chcecie wrażenie zrobi zawsze takie samo
+        </p>
+      </div>
+    </article>
+
+    <!-- 9) A już za niedługo -->
+    <article class="kategoria" id="wkrotce">
+      <button type="button" aria-expanded="false">
+        <span><strong>A już za niedługo...</strong></span>
+        <span class="chev">▸</span>
+      </button>
+      <div class="content" hidden>
+        <ul class="bullets">
+          <li>Fotobox Magazyn</li>
+          <li>Wiatraki iskier</li>
+          <li>Wodospad iskier</li>
+          <li>Wystrzałowe balony</li>
+          <li>Bańki mydlane</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+
+
     <!-- KONTAKT -->
     <section id="kontakt" class="container">
       <h2>Kontakt</h2>
