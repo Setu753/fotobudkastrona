@@ -100,25 +100,27 @@
     </section>
 
     <section id="kontakt" class="contact">
-        <h2 class="section-title">ZAREZERWUJ TERMIN</h2>
-        <div class="contact-container">
-            <form class="contact-form" id="contactForm" method="post" data-netlify="true">
-                <div class="input-row">
-                    <input type="text" placeholder="Imię i Nazwisko" required>
-                    <input type="email" placeholder="Adres E-mail" required>
-                    <input type="text" placeholder="Data i miejsce" required>
-                </div>
-                <textarea placeholder="Twoja wiadomość..." rows="5" required></textarea>
-                <button type="submit" class="btn-dark">WYŚLIJ ZAPYTANIE</button>
-            </form>
+    <h2 class="section-title">ZAREZERWUJ TERMIN</h2>
+    <div class="contact-container">
+        <form class="contact-form" id="contactForm" method="POST" data-netlify="true" name="contact">
+            <input type="hidden" name="form-name" value="contact">
             
-            <div id="thankYouMessage" style="display: none; padding: 40px; text-align: center;">
-                <i class="fas fa-check-circle" style="font-size: 3.5rem; color: #d4af37; margin-bottom: 20px;"></i>
-                <h2 style="color: #4a3728; margin-bottom: 10px;">DZIĘKUJEMY!</h2>
-                <p style="color: #8b7a6d;">Twoje zapytanie zostało wysłane. Odpowiemy najszybciej jak to możliwe! ⚡</p>
+            <div class="input-row">
+                <input type="text" name="name" placeholder="Imię i Nazwisko" required>
+                <input type="email" name="email" placeholder="Adres E-mail" required>
+                <input type="text" name="date_place" placeholder="Data i miejsce" required>
             </div>
+            <textarea name="message" placeholder="Twoja wiadomość..." rows="5" required></textarea>
+            <button type="submit" class="btn-dark">WYŚLIJ ZAPYTANIE</button>
+        </form>
+        
+        <div id="thankYouMessage" style="display: none; padding: 40px; text-align: center;">
+            <i class="fas fa-check-circle" style="font-size: 3.5rem; color: #d4af37; margin-bottom: 20px;"></i>
+            <h2 style="color: #4a3728; margin-bottom: 10px;">DZIĘKUJEMY!</h2>
+            <p style="color: #8b7a6d;">Twoje zapytanie zostało wysłane. Odpowiemy najszybciej jak to możliwe! ⚡</p>
         </div>
-    </section>
+    </div>
+</section>
 
     <footer>
         <p>&copy; 2026 Flash-Zone.pl | Wszystkie prawa zastrzeżone</p>
@@ -135,17 +137,26 @@
             } 
         }
 
-        // Obsługa formularza kontaktowego
-        document.getElementById('contactForm').onsubmit = function(e) {
-            e.preventDefault(); // Zatrzymuje odświeżanie strony
-            
-            // Ukrywa formularz i pokazuje podziękowanie
-            document.getElementById('contactForm').style.display = 'none';
-            document.getElementById('thankYouMessage').style.display = 'block';
-            
-            // Przewija widok do komunikatu
-            document.getElementById('thankYouMessage').scrollIntoView({ behavior: 'smooth' });
-        }
+        // Obsługa formularza kontaktowego przez Netlify AJAX
+document.getElementById('contactForm').onsubmit = function(e) {
+    e.preventDefault(); // Zatrzymuje odświeżanie strony
+
+    const myForm = e.target;
+    const formData = new FormData(myForm);
+    
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+    })
+    .then(() => {
+        // Jeśli wysyłka się udała, ukrywamy formularz i pokazujemy podziękowanie
+        myForm.style.display = 'none';
+        document.getElementById('thankYouMessage').style.display = 'block';
+        document.getElementById('thankYouMessage').scrollIntoView({ behavior: 'smooth' });
+    })
+    .catch((error) => alert("Wystąpił błąd: " + error));
+};
     </script>
 </body>
 </html>
