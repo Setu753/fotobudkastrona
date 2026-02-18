@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://flash-zone.pl/sitemap.xml
