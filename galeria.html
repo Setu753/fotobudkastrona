@@ -58,9 +58,43 @@
         </div>
     </section>
 
+    <div id="galleryModal" class="modal">
+        <div class="modal-content gallery-modal-content">
+            <span class="close" onclick="closeGalleryModal()">&times;</span>
+            <img id="fullImage" src="" alt="Powiększone zdjęcie Flash-Zone">
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2026 Flash-Zone.pl | Realizacje: Gniezno, Poznań, Września, Konin | Wszystkie prawa zastrzeżone</p>
     </footer>
 
-    </body>
+    <script>
+        // Funkcja otwierająca zdjęcie w pełnym rozmiarze
+        function openGalleryModal(imgSrc) {
+            var modal = document.getElementById('galleryModal');
+            var fullImg = document.getElementById('fullImage');
+            if (modal && fullImg) {
+                fullImg.src = imgSrc;
+                modal.style.display = "block";
+            }
+        }
+
+        // Funkcja zamykająca modal galerii
+        function closeGalleryModal() {
+            var modal = document.getElementById('galleryModal');
+            if (modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Zamykanie modala po kliknięciu w tło (overlay)
+        window.onclick = function(event) {
+            var modal = document.getElementById('galleryModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
 </html>
