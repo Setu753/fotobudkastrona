@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria | Flash-Zone</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><i class="fas fa-bolt"></i> FLASH-ZONE</div>
+        <ul class="nav-links">
+            <li><a href="index.html">START</a></li>
+            <li><a href="index.html#oferta">OFERTA</a></li>
+            <li><a href="galeria.html" class="active">GALERIA</a></li>
+            <li><a href="index.html#kontakt">KONTAKT</a></li>
+        </ul>
+        <div class="social-nav">
+            <a href="https://www.facebook.com/profile.php?id=61556558682813"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/fotobudka_flashzone"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@fotobudka_flashzone"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/48573670563"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </nav>
+
+    <section class="gallery-page">
+        <h2 class="section-title">NASZE REALIZACJE</h2>
+        <p class="gallery-desc">Kliknij w zdjęcie, aby je powiększyć</p>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openGalleryModal('galeria/3601.jpg')"><img src="galeria/3601.jpg" alt="Realizacja Flash-Zone"></div>
+            <div class="gallery-item" onclick="openGalleryModal('galeria/3602.jpg')"><img src="galeria/3602.jpg" alt="Realizacja Flash-Zone"></div>
+            <div class="gallery-item" onclick="openGalleryModal('galeria/3603.jpg')"><img src="galeria/3603.jpg" alt="Realizacja Flash-Zone"></div>
+            <div class="gallery-item" onclick="openGalleryModal('galeria/dym1.jpg')"><img src="galeria/dym1.jpg" alt="Realizacja Flash-Zone"></div>
+            <div class="gallery-item" onclick="openGalleryModal('galeria/dym2.jpg')"><img src="galeria/dym2.jpg" alt="Realizacja Flash-Zone"></div>
+            <div class="gallery-item" onclick="openGalleryModal('galeria/dym3.jpg')"><img src="galeria/dym3.jpg" alt="Realizacja Flash-Zone"></div>
+            <div class="gallery-item" onclick="openGalleryModal('galeria/klasyczna1.jpg')"><img src="galeria/klasyczna1.jpg" alt="Realizacja Flash-Zone"></div>
+            <div class="gallery-item" onclick="openGalleryModal('galeria/klasyczna2.jpg')"><img src="galeria/klasyczna2.jpg" alt="Realizacja Flash-Zone"></div>
+            <div class="gallery-item" onclick="openGalleryModal('galeria/klasyczna3.jpg')"><img src="galeria/klasyczna3.jpg" alt="Realizacja Flash-Zone"></div>
+            <div class="gallery-item" onclick="openGalleryModal('galeria/wystrzaly1.jpg')"><img src="galeria/wystrzaly1.jpg" alt="Realizacja Flash-Zone"></div>
+            <div class="gallery-item" onclick="openGalleryModal('galeria/wystrzaly2.jpg')"><img src="galeria/wystrzaly2.jpg" alt="Realizacja Flash-Zone"></div>
+            <div class="gallery-item" onclick="openGalleryModal('galeria/wystrzaly3.jpg')"><img src="galeria/wystrzaly3.jpg" alt="Realizacja Flash-Zone"></div>
+            <div class="gallery-item" onclick="openGalleryModal('galeria/retro1.jpg')"><img src="galeria/retro1.jpg" alt="Realizacja Flash-Zone"></div>
+            <div class="gallery-item" onclick="openGalleryModal('galeria/retro2.jpg')"><img src="galeria/retro2.jpg" alt="Realizacja Flash-Zone"></div>
+            <div class="gallery-item" onclick="openGalleryModal('galeria/retro3.jpg')"><img src="galeria/retro3.jpg" alt="Realizacja Flash-Zone"></div>
+            <div class="gallery-item" onclick="openGalleryModal('galeria/telefon1.jpg')"><img src="galeria/telefon1.jpg" alt="Realizacja Flash-Zone"></div>
+            <div class="gallery-item" onclick="openGalleryModal('galeria/telefon2.jpg')"><img src="galeria/telefon2.jpg" alt="Realizacja Flash-Zone"></div>
+            <div class="gallery-item" onclick="openGalleryModal('galeria/telefon3.jpg')"><img src="galeria/telefon3.jpg" alt="Realizacja Flash-Zone"></div>
+        </div>
+    </section>
+
+    <div id="galleryModal" class="modal">
+        <div class="modal-content gallery-modal-content">
+            <span class="close" onclick="closeGalleryModal()">&times;</span>
+            <img id="fullImage" src="" alt="Powiększone zdjęcie">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Flash-Zone.pl | Wszystkie prawa zastrzeżone</p>
+    </footer>
+
+    <script>
+        function openGalleryModal(imgSrc) {
+            document.getElementById('fullImage').src = imgSrc;
+            document.getElementById('galleryModal').style.display = "block";
+        }
+
+        function closeGalleryModal() {
+            document.getElementById('galleryModal').style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById('galleryModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+/* RESET & BASE */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(180deg, #fdfbf7 0%, #f5eee6 100%);
+    color: #4a3728;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 10%; background: rgba(253, 251, 247, 0.95);
+    backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000;
+    border-bottom: 1px solid #e2d1c3;
+}
+.logo {
+    font-weight: 900;
+    font-size: 1.8rem;
+    font-style: italic;
+    background: linear-gradient(45deg, #8b5e3c, #d4af37);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;      
+    padding-right: 15px;        
+    padding-bottom: 5px;        
+    white-space: nowrap;       
+}
+.nav-links { 
+    display: flex; 
+    list-style: none; 
+}
+
+.nav-links li { 
+    margin-left: 25px; 
+}
+
+.nav-links a { 
+    text-decoration: none; 
+    color: #4a3728; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    font-size: 0.85rem;
+    transition: 0.3s ease; /* Dodaj to, żeby kolor zmieniał się płynnie */
+}
+
+/* To sprawi, że po najechaniu napisy staną się złote */
+.nav-links a:hover {
+    color: #d4af37; 
+    transform: translateY(-2px); /* Delikatne uniesienie, jak w socialach */
+    display: inline-block; /* Wymagane, żeby transformacja zadziałała */
+}
+
+/* HERO */
+.hero {
+    height: 85vh;
+    background: linear-gradient(rgba(43, 33, 26, 0.6), rgba(43, 33, 26, 0.2)), url('media/wystrzaly.jpg') center/cover no-repeat;
+    display: flex; justify-content: center; align-items: flex-start; 
+    text-align: center; color: #fff; padding-top: 12vh;
+}
+.hero h1 { font-size: 3.5rem; text-transform: uppercase; letter-spacing: 5px; text-shadow: 2px 4px 10px rgba(0,0,0,0.6); }
+.btn { display: inline-block; margin-top: 20px; padding: 15px 35px; background: #fff; color: #4a3728; text-decoration: none; font-weight: 700; border-radius: 5px; text-transform: uppercase; transition: 0.3s; }
+.btn:hover { background: #d4af37; color: #fff; }
+
+/* OFERTA GRID 4+4+2 */
+.services { padding: 80px 10%; }
+.section-title { text-align: center; margin-bottom: 50px; color: #8b5e3c; text-transform: uppercase; }
+.grid-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; max-width: 1400px; margin: 0 auto; }
+.card {
+    flex: 0 1 calc(25% - 25px); min-width: 280px;
+    background: #fff; border-radius: 12px; overflow: hidden;
+    text-align: center; padding-bottom: 20px; cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s;
+}
+.card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(74, 55, 40, 0.12); }
+.card-img { height: 200px; background-size: cover; background-position: center; margin-bottom: 15px; }
+.card h3 { font-size: 0.85rem; font-weight: 700; color: #4a3728; padding: 0 10px; }
+
+/* MODERN MODAL */
+.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(43, 33, 26, 0.9); }
+.modal-content { background: #fdfbf7; margin: 5% auto; width: 95%; max-width: 900px; border-radius: 15px; position: relative; overflow: hidden; border: 1px solid #e2d1c3; }
+.modal-flex { display: flex; flex-direction: row; align-items: stretch; }
+.modal-image { flex: 1.2; min-height: 450px; }
+.modal-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.modal-info { flex: 1; padding: 40px; display: flex; flex-direction: column; justify-content: center; }
+.modal-info h2 { color: #8b5e3c; margin-bottom: 10px; border-bottom: 2px solid #d4af37; display: inline-block; font-size: 1.5rem; }
+.modal-info p { font-style: italic; margin-bottom: 20px; color: #6d5b4e; font-size: 0.9rem; }
+.modal-info li { list-style: none; margin-bottom: 10px; display: flex; align-items: center; font-size: 0.95rem; }
+.modal-info li::before { content: "❤ "; color: #d4af37; margin-right: 10px; }
+.close { position: absolute; right: 20px; top: 15px; font-size: 30px; cursor: pointer; z-index: 10; background: rgba(255,255,255,0.9); width: 45px; height: 45px; border-radius: 50%; display: flex; justify-content: center; align-items: center; }
+
+/* KONTAKT */
+.contact { padding: 80px 10%; background: #f5eee6; }
+.input-row { display: flex; gap: 15px; margin-bottom: 15px; }
+.input-row input, textarea { flex: 1; padding: 15px; border: 1px solid #dccdc1; border-radius: 8px; font-family: inherit; width: 100%; }
+.btn-dark { display: block; margin: 20px auto 0; padding: 15px 60px; background: #4a3728; color: #fff; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; transition: 0.3s; }
+.btn-dark:hover { background: #8b5e3c; }
+
+.about { padding: 80px 10%; background: #4a3728; color: #f5eee6; text-align: center; }
+footer { padding: 40px; text-align: center; background: #2b211a; color: #8b7a6d; font-size: 0.8rem; }
+
+/* RESPONSIVE */
+@media (max-width: 1100px) { .card { flex: 0 1 calc(50% - 25px); } }
+@media (max-width: 768px) {
+    .modal-flex { flex-direction: column; }
+    .modal-image { min-height: 250px; }
+    .input-row { flex-direction: column; }
+    .nav-links { display: none; }
+    .card { flex: 0 1 100%; }
+}
+.social-nav {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.social-nav a {
+    color: #4a3728; /* Głęboki brąz pasujący do nawigacji */
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.social-nav a:hover {
+    color: #d4af37; /* Złoty kolor przy najechaniu, pasujący do serduszek w ofercie */
+    transform: translateY(-3px);
+}
+/* STYLE GALERII */
+.gallery-page {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.gallery-desc {
+    margin-bottom: 40px;
+    color: #8b7a6d;
+    font-style: italic;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    height: 300px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(74, 55, 40, 0.2);
+}
+
+.gallery-item:hover img {
+    filter: brightness(1.1);
+}
+
+/* Podświetlenie aktywnej zakładki w menu */
+.nav-links a.active {
+    color: #d4af37;
+    border-bottom: 2px solid #d4af37;
+}
+/* Style dla powiększonego zdjęcia w galerii */
+.gallery-modal-content {
+    max-width: 80% !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fullImage {
+    max-height: 85vh;
+    width: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
