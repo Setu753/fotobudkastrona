@@ -102,12 +102,48 @@ body {
 footer { padding: 40px; text-align: center; background: #2b211a; color: #8b7a6d; font-size: 0.8rem; }
 
 /* RESPONSIVE */
-@media (max-width: 1100px) { .card { flex: 0 1 calc(50% - 25px); } }
+/* RESPONSIVE - POPRAWIONE MENU MOBILNE */
+@media (max-width: 1100px) { 
+    .card { flex: 0 1 calc(50% - 25px); } 
+}
+
 @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Układa logo, menu i sociale jedno pod drugim */
+        padding: 15px 5%;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+        font-size: 1.5rem; /* Odrobinę mniejsze logo na telefonie */
+    }
+
+    .nav-links { 
+        display: flex; /* ZMIANA: Zamiast none, dajemy flex */
+        flex-wrap: wrap; /* Pozwala linkom przejść do nowej linii, jeśli się nie mieszczą */
+        justify-content: center;
+        gap: 10px; /* Odstępy między linkami */
+        margin-bottom: 15px;
+    }
+
+    .nav-links li { 
+        margin-left: 0; /* Usuwamy duży margines z wersji komputerowej */
+        margin: 0 5px; 
+    }
+
+    .nav-links a {
+        font-size: 0.75rem; /* Mniejszy tekst, żeby wszystko weszło obok siebie */
+    }
+
+    .social-nav {
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Reszta Twoich stylów mobilnych */
     .modal-flex { flex-direction: column; }
     .modal-image { min-height: 250px; }
     .input-row { flex-direction: column; }
-    .nav-links { display: none; }
     .card { flex: 0 1 100%; }
 }
 .social-nav {
