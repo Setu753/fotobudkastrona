@@ -70,7 +70,7 @@ body {
 .card h3 { font-size: 0.85rem; font-weight: 700; color: #4a3728; padding: 0 10px; }
 .more-btn { display: block; margin-top: 10px; font-size: 0.7rem; font-weight: 900; color: #d4af37; letter-spacing: 1px; }
 
-/* MODERN MODAL - POPRAWKA PRZEWIJANIA */
+/* MODERN MODAL */
 .modal { 
     display: none; 
     position: fixed; 
@@ -131,14 +131,13 @@ body {
 @keyframes fadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
 .long-description { font-size: 0.9rem; color: #6d5b4e; line-height: 1.5; }
 
-/* KONTAKT - WYRÓWNANIE FORMULARZA */
+/* KONTAKT */
 .contact { padding: 80px 10%; background: #f5eee6; }
 .contact-container { max-width: 800px; margin: 0 auto; }
 .input-row { display: flex; gap: 15px; margin-bottom: 15px; }
 
-/* Główne style dla pól wejściowych, w tym select */
+/* Główne style dla pól wejściowych */
 .input-row input, 
-.input-row select, 
 textarea { 
     flex: 1; 
     padding: 15px; 
@@ -151,25 +150,82 @@ textarea {
     background-color: white;
 }
 
-/* Wymuszenie tej samej wysokości dla pól w rzędach */
-.input-row input, 
-.input-row select {
-    height: 55px; /* Stała wysokość wyrównująca pola */
+.input-row input {
+    height: 55px; 
 }
 
-/* Specjalne traktowanie select dla zachowania wyglądu */
-.input-row select {
+/* STYL DLA ROZWIJANYCH CHECKBOXÓW (DROPDOWN) */
+.multiselect {
+    flex: 1; /* Pozwala na wyrównanie w rzędzie obok innych inputów */
+    position: relative;
+    height: 55px;
+}
+
+.selectBox {
+    position: relative;
+    height: 100%;
+}
+
+.selectBox select {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    border: 1px solid #dccdc1;
+    border-radius: 8px;
+    font-family: inherit;
+    background-color: white;
+    color: #4a3728;
     cursor: pointer;
-    appearance: none; /* Ukrycie domyślnej strzałki systemowej */
+    appearance: none;
     -webkit-appearance: none;
-    /* Dodanie własnej, pasującej strzałki */
     background-image: url('data:image/svg+xml;charset=US-ASCII,<svg%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20width%3D"292.4"%20height%3D"292.4"><path%20fill%3D"%238b5e3c"%20d%3D"M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z"%2F><%2Fsvg>');
     background-repeat: no-repeat;
     background-position: right 15px top 50%;
     background-size: 12px auto;
-    padding-right: 40px;
 }
 
+.overSelect {
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+}
+
+#checkboxes {
+    display: none;
+    border: 1px solid #dccdc1;
+    background-color: white;
+    position: absolute;
+    z-index: 1001; /* Wyżej niż navbar w razie potrzeby */
+    width: 100%;
+    max-height: 250px;
+    overflow-y: auto;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    top: 55px; /* Pojawia się dokładnie pod polem */
+}
+
+#checkboxes label {
+    display: block;
+    padding: 12px 15px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.2s;
+    text-align: left;
+    color: #4a3728;
+}
+
+#checkboxes label:hover {
+    background-color: #fdfbf7;
+    color: #d4af37;
+}
+
+#checkboxes input {
+    margin-right: 15px;
+    accent-color: #d4af37;
+    width: 18px;
+    height: 18px;
+}
+
+/* PRZYCISK KONTAKTU */
 .btn-dark { display: block; margin: 20px auto 0; padding: 15px 60px; background: #4a3728; color: #fff; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; transition: 0.3s; }
 .btn-dark:hover { background: #8b5e3c; }
 
@@ -208,9 +264,9 @@ textarea {
     .modal-flex { flex-direction: column; }
     .modal-image { min-height: 250px; }
     .modal-content { margin: 10px auto; }
-    .input-row { flex-direction: column; }
-    /* Wyrównanie wysokości dla mobile */
-    .input-row input, .input-row select { height: 50px; }
+    .input-row { flex-direction: column; gap: 10px; }
+    .input-row input, .multiselect { height: 50px; }
+    #checkboxes { top: 50px; }
     .card { flex: 0 1 100%; }
     .hero h1 { font-size: 2.2rem; }
 }

@@ -133,22 +133,28 @@
                 </div>
                 <div class="input-row">
                     <input type="tel" name="phone" placeholder="Numer telefonu" required>
-                    <div class="input-row" style="margin-bottom: 15px;">
-                <select name="atrakcja" required style="flex: 1; padding: 15px; border: 1px solid #dccdc1; border-radius: 8px; font-family: inherit; background-color: white; color: #4a3728; cursor: pointer;">
-                    <option value="" disabled selected>Wybierz atrakcję, która Cię interesuje...</option>
-                    <option value="Fotobudka Retro">Fotobudka Retro</option>
-                    <option value="Fotobudka Klasyczna">Fotobudka Klasyczna</option>
-                    <option value="Fotobudka 360">Fotobudka 360 / Overhead</option>
-                    <option value="Ciężki Dym">Ciężki Dym</option>
-                    <option value="Iskry">Wiatraki i Fontanny Iskier</option>
-                    <option value="Wystrzały">Kolorowe Wystrzały</option>
-                    <option value="Balony">Wystrzałowe Balony</option>
-                    <option value="Bańki">Bańki Mydlane z Dymem</option>
-                    <option value="Telefon Życzeń">Telefon Życzeń</option>
-                    <option value="Instax">Aparat Instax</option>
-                    <option value="Pakiet">Pakiet kilku atrakcji</option>
-                </select>
-            </div>
+                    <div class="multiselect">
+                        <div class="selectBox" onclick="showCheckboxes()">
+                            <select>
+                                <option>Wybierz atrakcje...</option>
+                            </select>
+                            <div class="overSelect"></div>
+                        </div>
+                        <div id="checkboxes">
+                            <label><input type="checkbox" name="atrakcja" value="Fotobudka Retro"> Fotobudka Retro</label>
+                            <label><input type="checkbox" name="atrakcja" value="Fotobudka Klasyczna"> Fotobudka Klasyczna</label>
+                            <label><input type="checkbox" name="atrakcja" value="Fotobudka 360"> Fotobudka 360 / Overhead</label>
+                            <label><input type="checkbox" name="atrakcja" value="Ciężki Dym"> Ciężki Dym</label>
+                            <label><input type="checkbox" name="atrakcja" value="Iskry"> Wiatraki i Fontanny Iskier</label>
+                            <label><input type="checkbox" name="atrakcja" value="Wystrzały"> Kolorowe Wystrzały</label>
+                            <label><input type="checkbox" name="atrakcja" value="Balony"> Wystrzałowe Balony</label>
+                            <label><input type="checkbox" name="atrakcja" value="Bańki"> Bańki Mydlane z Dymem</label>
+                            <label><input type="checkbox" name="atrakcja" value="Telefon Życzeń"> Telefon Życzeń</label>
+                            <label><input type="checkbox" name="atrakcja" value="Instax"> Aparat Instax</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-row">
                     <input type="text" name="date_place" placeholder="Data i miejsce eventu" required>
                 </div>
                 <textarea name="message" placeholder="Dodatkowe informacje..." rows="5" required></textarea>
@@ -197,6 +203,26 @@
             }
         }
         window.onclick = function(event) { if (event.target.classList.contains('modal')) { closeModal(event.target.id); } }
+
+        var expanded = false;
+        function showCheckboxes() {
+            var checkboxes = document.getElementById("checkboxes");
+            if (!expanded) {
+                checkboxes.style.display = "block";
+                expanded = true;
+            } else {
+                checkboxes.style.display = "none";
+                expanded = false;
+            }
+        }
+        document.addEventListener('click', function(e) {
+            var container = document.querySelector('.multiselect');
+            var checkboxes = document.getElementById("checkboxes");
+            if (container && !container.contains(e.target)) {
+                checkboxes.style.display = "none";
+                expanded = false;
+            }
+        });
     </script>
 </body>
 </html>
