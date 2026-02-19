@@ -165,10 +165,6 @@
                 <h2>DZIĘKUJEMY!⚡</h2>
             </div>
         </div>
-        <div class="contact-details" style="display: flex; justify-content: center; gap: 30px; margin-top: 30px; text-align: center; flex-wrap: wrap;">
-            <div class="contact-item"><i class="fas fa-phone-alt" style="color: #d4af37;"></i><p><a href="tel:+48573670563" style="text-decoration: none; color: inherit; font-weight: 700;">+48 573 670 563</a></p></div>
-            <div class="contact-item"><i class="fas fa-envelope" style="color: #d4af37;"></i><p><a href="mailto:fotobudka.flashzone@gmail.com" style="text-decoration: none; color: inherit;">fotobudka.flashzone@gmail.com</a></p></div>
-        </div>
         <div class="social-contact" style="text-align: center; margin-top: 40px;">
             <div class="social-nav" style="justify-content: center; display: flex; gap: 20px;">
                 <a href="https://www.facebook.com/profile.php?id=61556558682813" target="_blank" style="font-size: 1.5rem; color: #4a3728;"><i class="fab fa-facebook-f"></i></a>
@@ -223,6 +219,36 @@
                 expanded = false;
             }
         });
+
+        // POPRAWIONA OBSŁUGA FORMULARZA DLA NETLIFY
+        document.getElementById('contactForm').onsubmit = function(e) {
+            e.preventDefault();
+            const myForm = e.target;
+            const formData = new FormData(myForm);
+            
+            // Zbieranie zaznaczonych checkboxów
+            const selectedAtrakcje = [];
+            document.querySelectorAll('input[name="atrakcja"]:checked').forEach((checkbox) => {
+                selectedAtrakcje.push(checkbox.value);
+            });
+            
+            // Jeśli zaznaczono jakieś atrakcje, nadpisujemy pole tekstowe
+            if (selectedAtrakcje.length > 0) {
+                formData.set('atrakcja', selectedAtrakcje.join(', '));
+            }
+
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString(),
+            })
+            .then(() => {
+                myForm.style.display = 'none';
+                document.getElementById('thankYouMessage').style.display = 'block';
+                document.getElementById('thankYouMessage').scrollIntoView({ behavior: 'smooth' });
+            })
+            .catch((error) => alert("Wystąpił błąd: " + error));
+        };
     </script>
 </body>
 </html>
