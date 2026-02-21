@@ -46,8 +46,8 @@ body {
 
 /* HERO */
 .hero {
-    height: 88vh;
-    background: linear-gradient(rgba(43, 33, 26, 0.6), rgba(43, 33, 26, 0.2)), url('media/wystrzaly.jpg') center/cover no-repeat;
+    height: 89vh;
+    background: linear-gradient(rgba(43, 33, 26, 0.6), rgba(43, 33, 26, 0.2)), url('media/baner.jpg') center/cover no-repeat;
     display: flex; justify-content: center; align-items: flex-start; 
     text-align: center; color: #fff; padding-top: 15vh;
 }
