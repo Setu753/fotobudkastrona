@@ -298,3 +298,108 @@ textarea {
 
 .about { padding: 80px 10%; background: #4a3728; color: #f5eee6; text-align: center; }
 footer { padding: 40px; text-align: center; background: #2b211a; color: #8b7a6d; font-size: 0.8rem; }
+/* Sekcja Opinii */
+.reviews-section {
+    padding: 80px 0;
+    background: #fdfbf7;
+    overflow: hidden;
+    border-top: 1px solid #e2d1c3;
+}
+
+.reviews-container {
+    width: 100%;
+    display: flex;
+}
+
+.reviews-track {
+    display: flex;
+    gap: 30px;
+    /* 50 sekund to idealne tempo dla 12 kart (6 oryginałów + 6 kopii) */
+    animation: scrollReviews 50s linear infinite;
+    padding: 20px 0;
+}
+
+.reviews-track:hover {
+    animation-play-state: paused;
+}
+
+.review-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #e2d1c3;
+    min-width: 350px;
+    max-width: 350px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-card .stars {
+    color: #d4af37;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.review-card p {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #4a3728;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.review-card strong {
+    display: block;
+    text-align: right;
+    color: #8b5e3c;
+    font-size: 0.9rem;
+}
+
+/* Przycisk Google pod opiniami */
+.google-cta-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.google-cta-box {
+    display: inline-block;
+    background: #ffffff;
+    border: 1px solid #e2d1c3;
+    padding: 30px 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.google-cta-box i {
+    font-size: 2.5rem;
+    color: #4285F4;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.google-cta-box p {
+    font-weight: 700;
+    color: #4a3728;
+    margin-bottom: 20px;
+}
+
+/* Animacja - przesuwamy dokładnie o szerokość 6 unikalnych kart + gapy */
+@keyframes scrollReviews {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-380px * 6)); }
+}
+
+/* RWD - mniejsze karty na telefonach */
+@media (max-width: 768px) {
+    .review-card {
+        min-width: 280px;
+        max-width: 280px;
+        padding: 20px;
+    }
+    @keyframes scrollReviews {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-310px * 6)); }
+    }
+}
