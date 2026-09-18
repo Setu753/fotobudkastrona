@@ -403,3 +403,55 @@ footer { padding: 40px; text-align: center; background: #2b211a; color: #8b7a6d;
         100% { transform: translateX(calc(-310px * 6)); }
     }
 }
+/* ========================= */
+/* FILMY W GALERII */
+/* ========================= */
+
+.gallery-subtitle {
+    margin-top: 60px;
+    margin-bottom: 25px;
+    color: #8b5e3c;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.gallery-subtitle i {
+    color: #d4af37;
+    margin-right: 10px;
+}
+
+/* ========================= */
+/* FILMY YOUTUBE W GALERII */
+/* ========================= */
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+.video-item {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000;
+}
+
+.video-item iframe {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    border: 0;
+}
+
+/* Telefon */
+@media (max-width: 700px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
